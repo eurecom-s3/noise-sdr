@@ -24,6 +24,7 @@
 #ifndef _MISC_H
 #define _MISC_H
 
+#define _USE_MATH_DEFINES
 #include <cmath>
 
 extern unsigned long hweight32(unsigned long w);

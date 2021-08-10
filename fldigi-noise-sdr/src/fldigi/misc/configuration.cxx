@@ -26,7 +26,7 @@
 // along with fldigi.  If not, see <http://www.gnu.org/licenses/>.
 // ----------------------------------------------------------------------------
 
-//Android#include <config.h>
+// Android#include <config.h>
 
 #include "configuration.h"
 //#include "confdialog.h"
@@ -39,8 +39,8 @@
 //#include "icons.h"
 
 #if USE_HAMLIB
-	#include "hamlib.h"
-	#include "rigclass.h"
+#include "hamlib.h"
+#include "rigclass.h"
 #endif
 
 //#include "rigio.h"
@@ -49,37 +49,37 @@
 
 //#include <FL/Fl_Tooltip.H>
 
-#include <unistd.h>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <map>
 #include <sstream>
+#include <unistd.h>
 
 #ifdef __linux__
-#  include <dirent.h>
-#  include <limits.h>
-#  include <errno.h>
+#include <dirent.h>
+#include <errno.h>
+#include <limits.h>
 //#  include <glob.h>
 #endif
 #ifdef __APPLE__
-#  include <glob.h>
+#include <glob.h>
 #endif
 #ifndef __CYGWIN__
-#  include <sys/stat.h>
+#include <sys/stat.h>
 #else
-#  include <fcntl.h>
+#include <fcntl.h>
 #endif
 
 // this tests depends on a modified FL/filename.H in the Fltk-1.3.0
 // change
 //#  if defined(WIN32) && !defined(__CYGWIN__) && !defined(__WATCOMC__)
 // to
-//#  if defined(WIN32) && !defined(__CYGWIN__) && !defined(__WATCOMC__) && !defined(__WOE32__)
+//#  if defined(WIN32) && !defined(__CYGWIN__) && !defined(__WATCOMC__) &&
+//! defined(__WOE32__)
 
 #include <dirent.h>
 
 using namespace std;
-
 
 // By redefining the ELEM_ macro, we can control what the CONFIG_LIST macro
 // will expand to, and accomplish several things:
@@ -96,6 +96,4 @@ using namespace std;
 // First define the default config
 #undef ELEM_
 #define ELEM_ ELEM_PROGDEFAULTS
-configuration progdefaults = { CONFIG_LIST };
-
-
+configuration progdefaults = {CONFIG_LIST};

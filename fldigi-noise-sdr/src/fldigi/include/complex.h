@@ -25,6 +25,7 @@
 #ifndef _COMPLEX_H
 #define _COMPLEX_H
 
+#define _USE_MATH_DEFINES
 #include <cmath>
 
 class cmplx {

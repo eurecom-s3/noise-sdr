@@ -54,8 +54,6 @@
 #include "complex.h"
 //Android#include "gfft.h"
 #include "fft.h"
-//Android
-#include "jni.h"
 
 #define RSID_SAMPLE_RATE 11025.0
 
@@ -174,10 +172,14 @@ private:
 	inline int		HammingDistance(int iBucket, unsigned char *p2);
 	bool	search_amp( int &bin_out, int &symbol_out, unsigned char *pcode_table );
 	void	apply ( int iBin, int iSymbol, int extended );
+        double wpm;
+        double cwrisetime;
+        double rtty_baud;
+        bool rtty_shaped;
 
 public:
-	cRsId();
-	~cRsId();
+  cRsId(double _wpm, double _cwrisetime, int _rtty_baud, bool _rtty_shaped);
+        ~cRsId();
 	void	reset();
 //	void	receive(const float* buf, size_t len);
 	void	receive(const float* buf, size_t len, bool doSearch);

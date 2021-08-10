@@ -4,6 +4,7 @@
 #ifndef __FFT_H__
 #define __FFT_H__
 
+#define _USE_MATH_DEFINES
 #include <math.h>
 
 #include "pj_cmpx.h"

@@ -33,8 +33,7 @@
 #include "ascii.h"
 #include "configuration.h"
 
-
-#define	OUTBUFSIZE	16384
+#define OUTBUFSIZE 360000
 // Constants for signal searching & s/n threshold
 #define SIGSEARCH 5
 
@@ -85,7 +84,7 @@ protected:
 	double	cwRcvWPM;
 	double	cwXmtWPM;
 
-	double 	squelch;
+        double 	squelch;
 	double	metric;
 	double	syncpos;
 	//Android added to dynamically alter the squelch level from the Java side
@@ -185,8 +184,8 @@ int	get_mode();
 	bool		get_cwLock();
 	void		set_cwLock(bool);
 	double		get_cwXmtWPM();
-	void		set_cwXmtWPM(double);
-	double		get_cwRcvWPM();
+        void		set_cwXmtWPM(double);
+        double		get_cwRcvWPM();
 	virtual	void		incWPM() {};
 	virtual void		decWPM() {};
 	virtual void		toggleWPM() {};

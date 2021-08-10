@@ -4,7 +4,8 @@
 // Copyright (C) 2006-2008
 //		Dave Freese, W1HKJ
 //
-// This file is part of fldigi.  Adapted from code contained in gmfsk source code
+// This file is part of fldigi.  Adapted from code contained in gmfsk source
+// code
 // distribution.
 //  gmfsk Copyright (C) 2001, 2002, 2003
 //  Tomi Manninen (oh2bns@sral.fi)
@@ -23,7 +24,7 @@
 // along with fldigi.  If not, see <http://www.gnu.org/licenses/>.
 // ----------------------------------------------------------------------------
 
-//Android #include <config.h>
+// Android #include <config.h>
 
 #include <cstring>
 
@@ -31,67 +32,57 @@
 
 // ----------------------------------------------------------------------
 
-interleave::interleave (int _size, int _depth, int dir)
-{
-	size = _size;
-	depth = _depth;
-	direction = dir;
-	len = size * size * depth;
-	table = new unsigned char [len];
-	flush();
+interleave::interleave(int _size, int _depth, int dir) {
+  size = _size;
+  depth = _depth;
+  direction = dir;
+  len = size * size * depth;
+  table = new unsigned char[len];
+  flush();
 }
 
-interleave::~interleave ()
-{
-	delete [] table;
+interleave::~interleave() { delete[] table; }
+
+void interleave::symbols(unsigned char *psyms) {
+  int i, j, k;
+
+  for (k = 0; k < depth; k++) {
+    for (i = 0; i < size; i++)
+      for (j = 0; j < size - 1; j++)
+        *tab(k, i, j) = *tab(k, i, j + 1);
+
+    for (i = 0; i < size; i++)
+      *tab(k, i, size - 1) = psyms[i];
+
+    for (i = 0; i < size; i++) {
+      if (direction == INTERLEAVE_FWD)
+        psyms[i] = *tab(k, i, size - i - 1);
+      else
+        psyms[i] = *tab(k, i, i);
+    }
+  }
 }
 
+void interleave::bits(unsigned int *pbits) {
+  unsigned char syms[size];
+  int i;
 
-void interleave::symbols(unsigned char *psyms)
-{
-	int i, j, k;
+  for (i = 0; i < size; i++)
+    syms[i] = (*pbits >> (size - i - 1)) & 1;
 
-	for (k = 0; k < depth; k++) {
-		for (i = 0; i < size; i++)
-			for (j = 0; j < size - 1; j++)
-				*tab(k, i, j) = *tab(k, i, j + 1);
+  symbols(syms);
 
-		for (i = 0; i < size; i++)
-			*tab(k, i, size - 1) = psyms[i];
-
-		for (i = 0; i < size; i++) {
-			if (direction == INTERLEAVE_FWD)
-				psyms[i] = *tab(k, i, size - i - 1);
-			else
-				psyms[i] = *tab(k, i, i);
-		}
-	}
+  for (*pbits = i = 0; i < size; i++)
+    *pbits = (*pbits << 1) | syms[i];
 }
 
-void interleave::bits(unsigned int *pbits)
-{
-	unsigned char syms[size];
-	int i;
-
-	for (i = 0; i < size; i++)
-		syms[i] = (*pbits >> (size - i - 1)) & 1;
-
-	symbols(syms);
-
-	for (*pbits = i = 0; i < size; i++)
-		*pbits = (*pbits << 1) | syms[i];
+void interleave::flush(void) {
+  // Fill entire RX interleaver with punctures or 0 depending on whether
+  // Rx or Tx
+  if (direction == INTERLEAVE_REV)
+    memset(table, PUNCTURE, len);
+  else
+    memset(table, 0, len);
 }
-
-void interleave::flush(void)
-{
-// Fill entire RX interleaver with punctures or 0 depending on whether
-// Rx or Tx
-	if (direction == INTERLEAVE_REV)
-		memset(table, PUNCTURE, len);
-	else
-		memset(table, 0, len);
-}
-
 
 // ----------------------------------------------------------------------
-

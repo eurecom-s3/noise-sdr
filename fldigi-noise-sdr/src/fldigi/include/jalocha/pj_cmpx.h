@@ -6,6 +6,7 @@
 #define __CMPX_H__
 
 #include <stdio.h>
+#define _USE_MATH_DEFINES
 #include <math.h>
 
 // ----------------------------------------------------------------------------

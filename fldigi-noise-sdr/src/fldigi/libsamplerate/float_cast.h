@@ -46,6 +46,7 @@
 */
 
 #include "config.h"
+#define _USE_MATH_DEFINES
 
 /*
 **	The presence of the required functions are detected during the configure
