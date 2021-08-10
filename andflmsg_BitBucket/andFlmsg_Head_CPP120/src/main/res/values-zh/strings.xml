@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bt_AddDeliveryCode">添加发送代码</string>
+    <string name="bt_AddMessage">添加消息</string>
+    <string name="bt_AddToHXField">添加到HX字段</string>
+    <string name="bt_ClearLog">删除日志</string>
+    <string name="bt_Compose">新建</string>
+    <string name="bt_Continue">继续</string>
+    <string name="bt_CopyToDrafts">复制到草稿箱</string>
+    <string name="bt_CopyToOutbox">复制到发件箱</string>
+    <string name="bt_Delete">删除</string>
+    <string name="bt_Drafts">草稿箱</string>
+    <string name="bt_HtmlDelivery">Html Deliv.</string>
+    <string name="bt_HtmlFileCopy">Html F.Cpy</string>
+    <string name="bt_ImageMode">图像模式</string>
+    <string name="bt_Inbox">收件箱</string>
+    <string name="bt_Logs">日志</string>
+    <string name="bt_ModemOnOff">解码器\n开/关</string>
+    <string name="bt_NextMode">下一模式</string>
+    <string name="bt_Outbox">发件箱</string>
+    <string name="bt_PlainText">纯文本</string>
+    <string name="bt_PrevMode">上一模式</string>
+    <string name="bt_Return">返回</string>
+    <string name="bt_ReturnToModem">返回解码界面</string>
+    <string name="bt_ReturnToTerminal">返回\n终端界面</string>
+    <string name="bt_RxRsID">接收RsID</string>
+    <string name="bt_SaveAgain">再次保存</string>
+    <string name="bt_SaveToDrafts">保存到草稿箱</string>
+    <string name="bt_SaveToOutbox">保存到发件箱</string>
+    <string name="bt_SaveToTemplates">保存到模板</string>
+    <string name="bt_SendAllMessages">发送所有消息</string>
+    <string name="bt_SendText">发送</string>
+    <string name="bt_Sent">已发送</string>
+    <string name="bt_Share">分享</string>
+    <string name="bt_SlantLeft">向左倾斜</string>
+    <string name="bt_SlantRight">向右倾斜</string>
+    <string name="bt_SpeedColor">速率/色彩</string>
+    <string name="bt_SqlchDown">静噪 降</string>
+    <string name="bt_SqlchUp">静噪 升</string>
+    <string name="bt_StopTx">停止发射</string>
+    <string name="bt_Templates">模板</string>
+    <string name="bt_ToOutbox">到发件箱</string>
+    <string name="bt_TransferFormOnly">仅限Tfer表格</string>
+    <string name="bt_Tune">调谐</string>
+    <string name="bt_TxOverRadio">发送</string>
+    <string name="bt_TxRsID">发送RsID</string>
+    <string name="bt_WFallOnOff">频谱图\n开/关</string>
+    <string name="pref_2To256">2,4,8,16,32,64,128 或 256</string>
+    <string name="pref_8BitExtendedCharSet">8位扩展字符(UTF-8)</string>
+    <string name="pref_AbortFormRxAfter">若干秒无信号终止邮件接收</string>
+    <string name="pref_AllowErrors">允许错误</string>
+    <string name="pref_AllowManualTuning">允许手动调整</string>
+    <string name="pref_AlsoTransmitUpperStartTone">同时传送上限音</string>
+    <string name="pref_AndFlushRxPipeline">(和刷新接收通道)</string>
+    <string name="pref_AppTheme">应用主题</string>
+    <string name="pref_AudioFrequency">音频频率500至2500Hz</string>
+    <string name="pref_BandwidthHz">带宽(Hz)</string>
+    <string name="pref_BandwidthRelativeToSignalWidth">(相对于信号宽度的带宽)</string>
+    <string name="pref_CWIDetectionSuppression">CWI检测和抑制</string>
+    <string name="pref_CWIThreshold">CWI阈值 (0.0 to 1.0)</string>
+    <string name="pref_CallSignInFileName">文件名包含呼号</string>
+    <string name="pref_DATAEXCHANGE">数据交换</string>
+    <string name="pref_DateFormat">日期格式</string>
+    <string name="pref_DateTimeFormat">日期/时间格式</string>
+    <string name="pref_DetectThorPreamble">检测THOR前同步码</string>
+    <string name="pref_EmailAddress">电子邮件地址</string>
+    <string name="pref_EncoderForCompression">压缩编码器</string>
+    <string name="pref_EndOfXmtID">邮件结束时发送RSID</string>
+    <string name="pref_ExtractTimesOut">提取超时</string>
+    <string name="pref_FILENAME">文件名称</string>
+    <string name="pref_FilterBandwidthFactor">滤波器带宽系数(1.0 to 2.0)</string>
+    <string name="pref_FilteringBeforeDecoding">解码前过滤</string>
+    <string name="pref_ForSomeDevices">对于某些设备 (通常 16 秒)</string>
+    <string name="pref_ForceCompressionOnTx">发送时强制启动压缩</string>
+    <string name="pref_ForceIntegrationReset">重置力集成（前向纠错）深度</string>
+    <string name="pref_GPSTIME">GPS时间</string>
+    <string name="pref_GeneralSettings">通用设置</string>
+    <string name="pref_IDs">RSID</string>
+    <string name="pref_IMAGEATTACHMENT">图像附件</string>
+    <string name="pref_IfItSavesTxCharacters">(注意：是否保存发送字符数)</string>
+    <string name="pref_IntegrationPeriod">整合期 (2 to 128, 默认 4)</string>
+    <string name="pref_JpegCompressionQuality">Jpeg图像压缩质量</string>
+    <string name="pref_LeapSecondsCorrection">跳秒修正</string>
+    <string name="pref_LongReceiveIntegration">长时接收集成</string>
+    <string name="pref_MaxPictureSizeBeforeAutoDownsize">自动缩小插入的图片</string>
+    <string name="pref_MaximunMegaPixels">最大像素</string>
+    <string name="pref_MessageWordsPerLine">消息 字/行</string>
+    <string name="pref_ModeList">模式列表</string>
+    <string name="pref_ModemVolume">调制解调器音量</string>
+    <string name="pref_ModesSpecificSettings">模式特定设置</string>
+    <string name="pref_MultiPSKCompatibleFEC">兼容MultiPSK前向纠错</string>
+    <string name="pref_MyAddress">我的地址</string>
+    <string name="pref_MyCallsign">我的呼号</string>
+    <string name="pref_MyCityStateZIP">我的 市/省/邮编</string>
+    <string name="pref_MyName">我的姓名</string>
+    <string name="pref_MyTelephone">我的电话号码</string>
+    <string name="pref_NOCAL">无呼号</string>
+    <string name="pref_NextSerialNumber">下一个序列号</string>
+    <string name="pref_NumberOfFecBlocks">(前向纠错分段)</string>
+    <string name="pref_NumberOfTones">音调数量</string>
+    <string name="pref_OnHTMLDisplayForms">(在HTML显示表单上)</string>
+    <string name="pref_PERSONALDATA">个人资料</string>
+    <string name="pref_PilotPowerDb">提示音功率 (dB)</string>
+    <string name="pref_PilotTone">提示音</string>
+    <string name="pref_RADIOGRAM">电文</string>
+    <string name="pref_SaveCpuResources">节省CPU资源</string>
+    <string name="pref_SearchesPassband">搜索通带</string>
+    <string name="pref_SerialInFileName">文件名包含序列号</string>
+    <string name="pref_ShowARLDescription">显示ARL说明</string>
+    <string name="pref_SlowCpu">低速CPU</string>
+    <string name="pref_SoftBitDecoding">软比特解码</string>
+    <string name="pref_SoftSymbolDecoding">软符号解码</string>
+    <string name="pref_TimeFormat">时间格式</string>
+    <string name="pref_TimeInFileName">文件名包含时间</string>
+    <string name="pref_ToneDuration">音调持续时间</string>
+    <string name="pref_ToneFrequencySpacing">(音调频率间隔)</string>
+    <string name="pref_TransmitLowerStartTone">传送较低的开始音</string>
+    <string name="pref_TuneMargin">音调间距 (2 to 128, 默认 8)</string>
+    <string name="pref_UseCompression">使用压缩进行数据交换</string>
+    <string name="pref_UseCustomListOfModes">使用自定义模式列表</string>
+    <string name="pref_UseGPSTime">使用GPS时间</string>
+    <string name="pref_UserInterface">用户界面</string>
+    <string name="pref_WhenNewBWOrTonesSelected">选择新的BW /音调时</string>
+    <string name="txt_About">关于</string>
+    <string name="txt_AndFormat">\n及其格式:</string>
+    <string name="txt_AreYouSureDeleteLogFile">您确定要删除此日志文件吗？</string>
+    <string name="txt_AreYouSureDeleteMessage">您确定要删除这条消息吗？</string>
+    <string name="txt_AreYouSureExit">您确定要离开？</string>
+    <string name="txt_AreYouSureOverwriteForms">
+这将覆盖NBEMS.files文件夹中的现有表单并添加新表单。 继续？
+    </string>
+    <string name="txt_AudioBTOFF">蓝牙音频 关闭</string>
+    <string name="txt_AudioBTON">蓝牙音频 打开</string>
+    <string name="txt_BTConnected">蓝牙已连接</string>
+    <string name="txt_BTDisconnected">蓝牙已断开</string>
+    <string name="txt_BadCrcFileContent">\n校验失败或缺少部分内容。 文件内容:</string>
+    <string name="txt_CPU">CPU</string>
+    <string name="txt_Cancel">取消</string>
+    <string name="txt_CantEditThatMessage">无法编辑此消息</string>
+    <string name="txt_ChecksumOK">\"文件完整性检查：校验通过\"</string>
+    <string name="txt_ChooseLocForNbemsFiles">
+请选择NBEMS.files文件夹的位置。 \n\n导航到所需的文件夹，然后按确定按钮
+    </string>
+    <string name="txt_Color">彩色</string>
+    <string name="txt_ComposeViewLongPress">
+新建界面\n\n 长按表单创建邮件
+    </string>
+    <string name="txt_CopiedFile">复制的文件</string>
+    <string name="txt_Digital">数据</string>
+    <string name="txt_DocumentDeleted">文件已删除</string>
+    <string name="txt_DoYouWantToMoveMsgToSentFolder">
+"您是否要将此消息移到已发送文件夹？"
+    </string>
+    <string name="txt_DraftViewLongPress">
+草稿界面\n\n长按一条消息以继续编辑
+    </string>
+    <string name="txt_EnterFileName">输入文件名</string>
+    <string name="txt_Exit">退出</string>
+    <string name="txt_FileNameNotBlank">文件名不能为空</string>
+    <string name="txt_FileNotFound">文件未找到</string>
+    <string name="txt_FldigiModemOn">
+调制解调器打开，调制解调器正在使用麦克风/蓝牙
+    </string>
+    <string name="txt_FormattingWait">正在格式化...请稍候</string>
+    <string name="txt_Grey">黑白</string>
+    <string name="txt_HTML">HTML</string>
+    <string name="txt_ImageInsertedInMessage">图片已插入邮件中</string>
+    <string name="txt_ImageReceivedTooLate">
+图像迟于消息接收完成 (> 20 sec).\\n\\n收到的图像将不会按预期方式附加到邮件中。\\n\\n将邮件复制到草稿，然后手动编辑并添加接收到的图像.
+    </string>
+    <string name="txt_InboxViewscreen">
+收件箱界面 \n\n长按一条消息以查看内容
+    </string>
+    <string name="txt_Listening">接收中</string>
+    <string name="txt_LogsView">日志界面\n\n 长按一个日志文件以查看内容</string>
+    <string name="txt_ModemCannotStopNow">
+现在无法停止调制解调器！ 当前正在接收或发送消息。
+    </string>
+    <string name="txt_ModemON">调制解调器 开启</string>
+    <string name="txt_ModemScreen">解码界面</string>
+    <string name="txt_MsgRxTimeout">
+\"\n由于首选项中设置的超时而中止新邮件接收!\"
+    </string>
+    <string name="txt_No">否</string>
+    <string name="txt_NoFlmsgStatement">
+消息文件的开头缺少\“ flmsg \”语句。 文件是否损坏？
+    </string>
+    <string name="txt_NoFormNameFound">
+在（损坏的？）消息文件中找不到表单名称，或者在文件开头缺少\“ flmsg \”语句。 显示原始文件内容
+    </string>
+    <string name="txt_NotAnExistingForm">
+\" 不是现有的表单文件。 无法格式化此消息，显示原始文件\"
+</string>
+    <string name="txt_NotInMiddleOfMessage">不在接收消息时</string>
+    <string name="txt_Ok">好</string>
+    <string name="txt_OutboxView">
+发件箱界面\n\n 长按消息以选择和发送
+</string>
+    <string name="txt_PermissionsExplained">
+"您将看到一系列权限请求。\n所有权限对于使此应用程序按预期工作至关重要。 \n如果您阻止任何权限，该应用将无法运行，并且将退出。 \n\n权限说明：\n1.访问精确位置：当不在蜂窝位置时，GPS用于显示准确的时间。 \n2.蓝牙和蓝牙管理：通过蓝牙设备发送和接收调制解调器音频。\n3.写入外部存储：访问SD卡上的应用目录（内部或外部）以存储消息和图像。\n4. 录制音频并修改音频设置：要从内部或外部麦克风捕获音频并调整设置。\n5. 互联网：用于显示和接收Flmsg使用的HTML表单中的数据。 \n6. 广播粘性：具有粘性通知，以便调制解调器服务在后台继续运行。\n7.读取电话状态：在接听电话时断开蓝牙接口。 电信法规通常禁止在没有警告的情况下将人连接到电话网络。\n\n如果您之前拒绝了某些关键权限，则必须返回到设备的设置/应用并重新允许缺少的权限"
+    </string>
+    <string name="txt_PleaseUseMenuExit">
+请使用菜单，然后使用退出选项关闭AndFlmsg
+    </string>
+    <string name="txt_PleaseWaitTxing">请稍候...仍在发送消息</string>
+    <string name="txt_Preferences">首选项</string>
+    <string name="txt_PressBackTwice">
+连续按两次返回按钮以返回到列表
+    </string>
+    <string name="txt_RawFlmsg">原始图像</string>
+    <string name="txt_ReceivedMessage">收到消息</string>
+    <string name="txt_ReceivingFile">接收文件</string>
+    <string name="txt_ReceivingNewMessage">\n\n 正在接收新邮件...</string>
+    <string name="txt_ReceivingNewMessageDiscardingOld">
+\"\n\n接收新消息，有部分数据丢失\n\"
+    </string>
+    <string name="txt_RxRsID">接收RsId</string>
+    <string name="txt_S2N">S2N</string>
+    <string name="txt_Save">保存</string>
+    <string name="txt_SavedFile">保存的文件</string>
+    <string name="txt_SavedImage">保存的图像</string>
+    <string name="txt_SavedRecoveredData">
+\n\n将恢复的数据另存为\'Last_Bad_CrC_Rx \'文件
+    </string>
+    <string name="txt_Secs">秒</string>
+    <string name="txt_SelectARLDeliveryCodes">选择ARL交付代码</string>
+    <string name="txt_SelectAnARLmessage">选择一个ARL消息</string>
+    <string name="txt_SelectSource">选择来源</string>
+    <string name="txt_SendForm">发送表格...</string>
+    <string name="txt_SendOverNetworkAsAttachment">用于作为附件发送（邮件...）</string>
+    <string name="txt_SendOverNetworkAsText">用于作为纯文本发送（短信...）</string>
+    <string name="txt_SentItemsView">
+已发送邮件界面\n\n长按一条消息即可查看
+    </string>
+    <string name="txt_SentMessagefile">发送消息文件</string>
+    <string name="txt_Shared">分享</string>
+    <string name="txt_SharingPurpose">
+选择您分享此消息的目的是：
+    </string>
+    <string name="txt_SorryHardCodedForm">
+抱歉，这是预定义的格式（以Flmsg进行硬编码），因此无法通过这种方式进行传输。 使用此方法只能传送自定义表格。
+    </string>
+    <string name="txt_TemplatesView">
+模板查看界面 \n\n长按模板可基于该模板创建新消息
+    </string>
+    <string name="txt_TerminalScreen">终端界面</string>
+    <string name="txt_ToDraftsFolderAs">到草稿文件夹</string>
+    <string name="txt_ToFolder">至</string>
+    <string name="txt_ToOutboxFolder">到发件箱文件夹</string>
+    <string name="txt_Transmitting">传送中</string>
+    <string name="txt_TxRsID">发送 RsId</string>
+    <string name="txt_UpdateForms">更新表格</string>
+    <string name="txt_UseDefault">默认文件夹</string>
+    <string name="txt_UseGalleryToView">使用图库查看和共享</string>
+    <string name="txt_UseThisFolder">自定义文件夹</string>
+    <string name="txt_ViewPrint">用于查看或打印</string>
+    <string name="txt_WRAP">包</string>
+    <string name="txt_WarningSharingFormOnly">
+警告！ 这仅用于共享原始表格。 想要将键入的数据另存为消息，请使用表单底部的按钮。 继续发送原始表格（无数据）吗？
+    </string>
+    <string name="txt_WelcomeIntro">
+\n\n 分发该程序是希望它会有用，但没有任何担保； 甚至没有对适销性或特定用途适用性的暗示保证。 有关更多详细信息，请参见GNU通用公共许可证。\n\n在屏幕上左右滑动以切换至其他界面，并使用设备的“菜单”按钮访问首选项和其他功能。\n\n请访问www.w1hkj.com。 有关更多详细信息\n\n 73，Fldigi团队
+    </string>
+    <string name="txt_WelcomeToAndFlmsg">欢迎来到AndFlmsg</string>
+    <string name="txt_Yes">是</string>
+    <string name="txt_arlmessage">ARRLl消息</string>
+    <string name="txt_crash_toast_text">
+请把软件使用问题通过电子邮件向作者反应，以帮助解决问题。 谢谢，73。
+    </string>
+    <string name="txt_license">
+\n\n基于David（Dave）Freese（W1HKJ）和团队的Fldigi和Flmsg开发。\n\n发布本程序的目的是希望它会有用，但不作任何保证；甚至没有对适用性或特定用途适用性的暗示保证。 \n有关更多详细信息，请参见GNU通用公共许可证。\n\n\n在以下许可下，包含aFileDialog库（版权所有2013 Jose F. Maldonado）：\n该库是免费软件；您可以根据自由软件基金会（Free Software Foundation）发布的GNU通用公共许可协议（GNU Lesser General Public License）的条款重新分发和/或修改它；许可的版本3，或（由您选择）任何更高的版本。 \n发布该库是希望它会有用，但没有任何保证；甚至没有对适用性或特定用途适用性的暗示保证。有关更多详细信息，请参见GNU较小通用公共许可证。 \n您应该已经与该库一起收到了GNU通用公共通用许可证的副本；如果没有，请参阅http://www.gnu.org/licenses/。
+    </string>
+    <string name="values_High">高</string>
+    <string name="values_Low">低</string>
+    <string name="values_Medium">中</string>
+    <string name="values_VeryHigh">非常高</string>
+    <string name="pref_DOMINOEX" translatable="false">DOMINOEX</string>
+    <string name="pref_MT63" translatable="false">MT63</string>
+    <string name="pref_OLIVIA" translatable="false">OLIVIA</string>
+    <string name="pref_PSK" translatable="false">PSK</string>
+    <string name="pref_THOR" translatable="false">THOR</string>
+    <string name="txt_app_name" translatable="false">AndFlmsg</string>
+    <string name="txt_0000" translatable="false">0000</string>
+    <string name="pref_ButtonTextSize">按钮文字大小（默认为12）</string>
+    <string name="txt_BluetoothAudio">蓝牙音频</string>
+    <string name="txt_Settings">首选项</string>
+    <string name="txt_SaveRestoreSettings">保存/还原设置</string>
+    <string name="txt_SaveSettingsToFile">将设置保存到文件</string>
+    <string name="txt_RestoreSettingsFromFile">从文件还原设置</string>
+    <string name="txt_RestoreSettingsToDefault">将设置恢复为默认值</string>
+    <string name="txt_YouWantToOverwriteSettings">
+您确定要用备份中的首选项覆盖当前首选项吗？
+    </string>
+    <string name="txt_YouWantToRestoreSettingsToDefault">
+您确定要将KEY设置恢复为默认设置吗？ \n\n将保留个人数据和非通信关键数据。
+    </string>
+    <string name="txt_NoBackupFileFound">
+找不到备份文件\n\n 首先使用“保存首选项”选项。
+    </string>
+    <string name="txt_PleaseChangeMode">此模式不支持发送邮件。请更换模式。</string>
+</resources>

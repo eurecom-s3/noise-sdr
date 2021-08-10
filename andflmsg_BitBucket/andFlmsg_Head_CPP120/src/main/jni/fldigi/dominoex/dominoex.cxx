@@ -1,0 +1,937 @@
+// ----------------------------------------------------------------------------
+//
+// dominoex.cxx  --  DominoEX modem
+//
+// Copyright (C) 2008-20012
+//     David Freese   <w1hkj@w1hkj.com>
+//     Hamish Moffatt <hamish@debian.org>
+//     John Phelps    <kl4yfd@gmail.com>
+//
+// based on code in gmfsk
+//
+// This file is part of fldigi.
+//
+// Fldigi is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Fldigi is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with fldigi.  If not, see <http://www.gnu.org/licenses/>.
+// ----------------------------------------------------------------------------
+
+//Android #include <config.h>
+
+#include <stdlib.h>
+
+#include <map>
+
+//Android #include "confdialog.h"
+//Android #include "status.h"
+
+#include "dominoex.h"
+//Android #include "trx.h"
+//Android #include "fl_digi.h"
+#include "filters.h"
+#include "misc.h"
+//Android #include "sound.h"
+#include "mfskvaricode.h"
+//Android #include "debug.h"
+//Android
+#include "AndFlmsg_Fldigi_Interface.h"
+
+//Android LOG_FILE_SOURCE(debug::LOG_MODEM);
+
+using namespace std;
+
+char dommsg[80];
+static map<int, unsigned char> mupsksec2pri;
+
+bool usingFEC = false;
+
+//Android
+//void dominoex::tx_init(SoundBase *sc)
+void dominoex::tx_init() {
+    //Android 	scard = sc;
+    txstate = TX_STATE_PREAMBLE;
+    txprevtone = 0;
+    Mu_bitstate = 0;
+    counter = 0;
+    txphase = 0;
+
+    //Android 	strSecXmtText = progdefaults.secText;
+    //Android if (strSecXmtText.length() == 0)
+    //Android 	strSecXmtText = "fldigi "PACKAGE_VERSION" ";
+
+    //Android videoText();
+}
+
+void dominoex::rx_init() {
+    synccounter = 0;
+    symcounter = 0;
+    Mu_symcounter = 0;
+    met1 = 0.0;
+    met2 = 0.0;
+    counter = 0;
+    phase[0] = 0.0;
+    for (int i = 0; i < MAXFFTS; i++)
+        phase[i + 1] = 0.0;
+    //Android put_MODEstatus(mode);
+    //Android put_sec_char(0);
+    syncfilter->reset();
+
+    Mu_datashreg = 1;
+
+    staticburst = false;
+
+    sig = noise = 6;
+}
+
+void dominoex::reset_filters() {
+// fft filter at first IF frequency
+    fft->create_filter((FIRSTIF - 0.5 * progdefaults.DOMINOEX_BW * bandwidth) / samplerate,
+                       (FIRSTIF + 0.5 * progdefaults.DOMINOEX_BW * bandwidth) / samplerate);
+
+    for (int i = 0; i < MAXFFTS; i++) {
+        if (binsfft[i]) delete binsfft[i];
+        binsfft[i] = 0;
+    }
+
+    if (slowcpu) {
+        //Android further reduce CPU load (at the detriment of some decoding. Used
+        //   only on older slow CPUs).
+        //	extones = 4;
+        //	paths = 3;
+        extones = 2;
+        paths = 1;
+    } else {
+        extones = NUMTONES / 2;
+        paths = 5;
+    }
+
+    lotone = basetone - extones * doublespaced;
+    hitone = basetone + NUMTONES * doublespaced + extones * doublespaced;
+
+    numbins = hitone - lotone;
+
+    for (int i = 0; i < paths; i++)//MAXFFTS; i++)
+        binsfft[i] = new sfft(symlen, lotone, hitone);
+
+    filter_reset = false;
+}
+
+void dominoex::restart() {
+    filter_reset = true;
+}
+
+void dominoex::init() {
+    if (mupsksec2pri.empty())
+        MuPsk_sec2pri_init();
+
+    modem::init();
+//	reset_filters();
+    rx_init();
+
+    //Android set_scope_mode(Digiscope::DOMDATA);
+}
+
+void dominoex::MuPsk_sec2pri_init(void) {
+    int chars[] = {'A', 0xc0, 0xc1, 0xc2, 0xc3, 0xc4, 0xc5, // Ã€, Ã�, Ã‚, Ãƒ, Ã„, Ã…
+                   0xe0, 0xe1, 0xe2, 0xe3, 0xe4, 0xe5, -1,  // Ã , Ã¡, Ã¢, Ã£, Ã¤, Ã¥
+                   'B', 0xdf, -1,                           // ÃŸ
+                   'C', 0xc7, 0xe7, 0xa9, -1,               // Ã‡, Ã§, Â©,
+                   'D', 0xd0, 0xb0, -1,                     // Ã�, Â°
+                   'E', 0xc6, 0xe6, 0xc8, 0xc9, 0xca, 0xcb, // Ã†, Ã¦, Ãˆ, Ã‰, ÃŠ, Ã‹
+                   0xe8, 0xe9, 0xea, 0xeb, -1,              // Ã¨, Ã©, Ãª, Ã«
+                   'F', 0x192, -1,                          // Æ’
+                   'I', 0xcc, 0xcd, 0xce, 0xcf, 0xec, 0xed, // ÃŒ, Ã�, ÃŽ, Ã�, Ã¬, Ã­
+                   0xee, 0xef, 0xa1, -1,                    // Ã®, Ã¯, Â¡
+                   'L', 0xa3, -1,                           // Â£
+                   'N', 0xd1, 0xf1, -1,                     // Ã‘, Ã±
+                   'O', 0xf4, 0xf6, 0xf2, 0xd6, 0xf3, 0xd3, // Ã´, Ã¶, Ã², Ã–, Ã³, Ã“
+                   0xd4, 0xd2, 0xf5, 0xd5, -1,              // Ã”, Ã’, Ãµ, Ã•
+                   'R', 0xae, -1,                           // Â®
+                   'U', 0xd9, 0xda, 0xdb, 0xdc, 0xf9, 0xfa, // Ã™, Ãš, Ã›, Ãœ, Ã¹, Ãº
+                   0xfb, 0xfc, -1,                          // Ã», Ã¼
+                   'X', 0xd7, -1,                           // Ã—
+                   'Y', 0xff, 0xfd, 0xdd, -1,               // Ã¿, Ã½, Ã�
+                   '0', 0xd8, -1,                           // Ã˜
+                   '1', 0xb9, -1,                           // Â¹
+                   '2', 0xb2, -1,                           // Â²
+                   '3', 0xb3, -1,                           // Â³
+                   '?', 0xbf, -1,                           // Â¿
+                   '!', 0xa1, -1,                           // Â¡
+                   '<', 0xab, -1,                           // Â«
+                   '>', 0xbb, -1,                           // Â»
+                   '{', '(', -1,
+                   '}', ')', -1,
+                   '|', '\\'
+    };
+
+    int c = chars[0];
+    for (size_t i = 1; i < sizeof(chars) / sizeof(*chars); i++) {
+        if (chars[i] != -1)
+            mupsksec2pri[chars[i]] = c;
+        else
+            c = chars[++i];
+    }
+}
+
+dominoex::~dominoex() {
+    if (hilbert) delete hilbert;
+
+    for (int i = 0; i < MAXFFTS; i++) {
+        if (binsfft[i]) delete binsfft[i];
+        binsfft[i] = 0;
+    }
+
+    for (int i = 0; i < SCOPESIZE; i++) {
+        if (vidfilter[i]) delete vidfilter[i];
+    }
+    if (syncfilter) delete syncfilter;
+
+    if (pipe) delete[] pipe;
+    if (fft) delete fft;
+
+    if (MuPskRxinlv) delete MuPskRxinlv;
+    if (MuPskTxinlv) delete MuPskTxinlv;
+    if (MuPskDec) delete MuPskDec;
+    if (MuPskEnc) delete MuPskEnc;
+
+}
+
+//Android
+//dominoex::dominoex(trx_mode md)
+dominoex::dominoex(int md) {
+    //Android Added access to progdefaults(preferences) in the Java side
+    progdefaults.DomCWI = getPreferenceD("DOMCWI", 0.0f);
+    progdefaults.DOMINOEX_FILTER = getPreferenceB("DOMINOEXFILTER", true);
+    progdefaults.DOMINOEX_BW = getPreferenceD("DOMINOEXBW", 2.0f);
+    progdefaults.DOMINOEX_FEC = getPreferenceB("DOMINOEXFEC", false);
+
+    progdefaults.DomCWI = clamp(progdefaults.DomCWI, 0.0f, 1.0f);
+    progdefaults.DOMINOEX_BW = clamp(progdefaults.DOMINOEX_BW, 1.0f, 2.0f);
+    //Android temp
+    reverse = false;
+
+    cap |= CAP_REV;
+
+    mode = md;
+
+    switch (mode) {
+// 11.025 kHz modes
+//Android converted to 8000 sample rate
+        case MODE_DOMINOEX5:
+//		symlen = 2048;
+            symlen = 1486;
+            doublespaced = 2;
+//		samplerate = 11025;
+            samplerate = 8000;
+            break;
+        case MODE_DOMINOEX11:
+//		symlen = 1024;
+            symlen = 743;
+            doublespaced = 1;
+//		samplerate = 11025;
+            samplerate = 8000;
+            break;
+        case MODE_DOMINOEX22:
+//		symlen = 512;
+            symlen = 372;
+            doublespaced = 1;
+//		samplerate = 11025;
+            samplerate = 8000;
+            break;
+// 8kHz modes
+        case MODE_DOMINOEXMICRO:
+            symlen = 4000;
+            doublespaced = 1;
+            samplerate = 8000;
+            break;
+        case MODE_DOMINOEX4:
+            symlen = 2048;
+            doublespaced = 2;
+            samplerate = 8000;
+            break;
+        case MODE_DOMINOEX8:
+            symlen = 1024;
+            doublespaced = 2;
+            samplerate = 8000;
+            break;
+        case MODE_DOMINOEX16:
+            symlen = 512;
+            doublespaced = 1;
+            samplerate = 8000;
+            break;
+// experimental 
+        case MODE_DOMINOEX44:
+//		symlen = 256;
+            symlen = 186;
+            doublespaced = 2;
+//		samplerate = 11025;
+            samplerate = 8000;
+            break;
+        case MODE_DOMINOEX88:
+//		symlen = 128;
+            symlen = 93;
+            doublespaced = 1;
+//		samplerate = 11025;
+            samplerate = 8000;
+            break;
+
+
+        default: // EX8
+            symlen = 1024;
+            doublespaced = 2;
+            samplerate = 8000;
+    }
+
+    tonespacing = 1.0 * samplerate * doublespaced / symlen;
+
+    bandwidth = NUMTONES * tonespacing;
+
+    hilbert = new C_FIR_filter();
+    hilbert->init_hilbert(37, 1);
+
+// fft filter at first if frequency
+    fft = new fftfilt((FIRSTIF - 0.5 * progdefaults.DOMINOEX_BW * bandwidth) / samplerate,
+                      (FIRSTIF + 0.5 * progdefaults.DOMINOEX_BW * bandwidth) / samplerate,
+                      1024);
+
+    basetone = (int) floor(BASEFREQ * symlen / samplerate + 0.5);
+
+    slowcpu = progdefaults.slowcpu;
+
+    for (int i = 0; i < MAXFFTS; i++)
+        binsfft[i] = 0;
+
+    reset_filters();
+
+    for (int i = 0; i < SCOPESIZE; i++)
+        vidfilter[i] = new Cmovavg(16);
+
+    syncfilter = new Cmovavg(16);
+
+    twosym = 2 * symlen;
+    pipe = new domrxpipe[twosym];
+
+    //Android scopedata.alloc(SCOPESIZE);
+    //Android videodata.alloc(MAXFFTS * numbins);
+
+    pipeptr = 0;
+
+    symcounter = 0;
+    Mu_symcounter = 0;
+    metric = 0.0;
+
+    fragmentsize = symlen;
+
+    s2n = 0.0;
+
+    prev1symbol = prev2symbol = 0;
+
+    MuPskEnc = new encoder(K, POLY1, POLY2);
+    MuPskDec = new viterbi(K, POLY1, POLY2);
+    MuPskDec->settraceback(45);
+    MuPskDec->setchunksize(1);
+    MuPskTxinlv = new interleave(4, 4, INTERLEAVE_FWD);
+    MuPskRxinlv = new interleave(4, 4, INTERLEAVE_REV);
+    Mu_bitstate = 0;
+    Mu_symbolpair[0] = Mu_symbolpair[1] = 0;
+    Mu_datashreg = 1;
+//	init();
+}
+
+//=====================================================================
+// rx modules
+cmplx dominoex::mixer(int n, cmplx in) {
+    cmplx z;
+    double f;
+
+// first IF mixer (n == 0) plus
+// MAXFFTS mixers are supported each separated by tonespacing/paths
+// n == 1, 2, 3, 4 ... MAXFFTS
+    if (n == 0)
+        f = frequency - FIRSTIF;
+    else
+        f = FIRSTIF - BASEFREQ - bandwidth / 2.0 + tonespacing * (1.0 * (n - 1) / paths);
+    z = cmplx(cos(phase[n]), sin(phase[n]));
+    z = z * in;
+    phase[n] -= TWOPI * f / samplerate;
+    if (phase[n] < 0) phase[n] += TWOPI;
+
+    return z;
+}
+
+void dominoex::recvchar(int c) {
+    //Android	if (!progStatus.sqlonoff || metric > progStatus.sldrSquelchValue) {
+    if (metric > sldrSquelchValue) {
+
+        if (c == -1)
+            return;
+        //Android		if (c & 0x100)
+        //Android 			 put_sec_char(c & 0xFF);
+        //Android 		else
+        put_rx_char(c & 0xFF);
+    }
+}
+
+void dominoex::decodeDomino(int c) {
+    int sym, ch;
+    //	If the new symbol is the start of a new character (MSB is low), complete the previous character
+    if (!(c & 0x8)) {
+        if (symcounter <= MAX_VARICODE_LEN) {
+            sym = 0;
+            for (int i = 0; i < symcounter; i++)
+                sym |= symbolbuf[i] << (4 * i);
+            ch = dominoex_varidec(sym);
+
+            if (!progdefaults.DOMINOEX_FEC)
+                if (!staticburst && !outofrange)
+                    recvchar(ch);
+        }
+        symcounter = 0;
+    }
+
+    // Add to the symbol buffer. Position 0 is the newest symbol.
+    for (int i = MAX_VARICODE_LEN - 1; i > 0; i--)
+        symbolbuf[i] = symbolbuf[i - 1];
+    symbolbuf[0] = c;
+
+    // Increment the counter, but clamp at max+1 to avoid overflow
+    symcounter++;
+    if (symcounter > MAX_VARICODE_LEN + 1)
+        symcounter = MAX_VARICODE_LEN + 1;
+}
+
+void dominoex::decodesymbol() {
+    int c;
+    double fdiff;
+
+// Decode the IFK+ sequence, which results in a single nibble
+
+    fdiff = currsymbol - prev1symbol;
+    if (reverse) fdiff = -fdiff;
+    fdiff /= doublespaced;
+    fdiff /= paths;
+
+//	if (fabs(fdiff) > 17)
+//		outofrange = true;
+//	else
+    outofrange = false;
+
+    c = (int) floor(fdiff + .5) - 2;
+    if (c < 0) c += NUMTONES;
+
+    decodeDomino(c);
+    decodeMuPskEX(c);
+}
+
+int dominoex::harddecode() {
+    double x, max = 0.0;
+    int symbol = 0;
+    double avg = 0.0;
+    bool cwi[paths * numbins];
+    double cwmag;
+
+    for (int i = 0; i < paths * numbins; i++)
+        //Android old complex class
+        //avg += abs(pipe[pipeptr].vector[i]);
+        avg += (pipe[pipeptr].vector[i]).mag();
+    avg /= (paths * numbins);
+
+    if (avg < 1e-10) avg = 1e-10;
+
+    int numtests = 10;
+    int count = 0;
+    for (int i = 0; i < paths * numbins; i++) {
+        cwmag = 0.0;
+        count = 0;
+        for (int j = 1; j <= numtests; j++) {
+            int p = pipeptr - j;
+            if (p < 0) p += twosym;
+            //Android old complex class
+            //cwmag = abs(pipe[j].vector[i])/numtests;
+            cwmag = (pipe[j].vector[i]).mag() / numtests;
+            if (cwmag >= 50.0 * (1.0 - progdefaults.ThorCWI) * avg) count++;
+        }
+        cwi[i] = (count == numtests);
+    }
+
+    for (int i = 0; i < (paths * numbins); i++) {
+        if (cwi[i] == false) {
+            //Android old complex class
+            //x = abs(pipe[pipeptr].vector[i]);
+            x = (pipe[pipeptr].vector[i]).mag();
+            avg += x;
+            if (x > max) {
+                max = x;
+                symbol = i;
+            }
+        }
+    }
+    avg /= (paths * numbins);
+    staticburst = (max / avg < 1.2);
+
+    return symbol;
+}
+
+void dominoex::update_syncscope() {
+
+    /* Android not used
+    double max = 0, min = 1e6, range, mag;
+
+// dom waterfall
+    memset(videodata, 0, (paths * numbins) * sizeof(double));
+
+    if (!progStatus.sqlonoff || metric >= progStatus.sldrSquelchValue) {
+        for (int i = 0; i < (paths * numbins); i++ ) {
+            mag = abs(pipe[pipeptr].vector[i]);
+            if (max < mag) max = mag;
+            if (min > mag) min = mag;
+        }
+        range = max - min;
+        for (int i = 0; i < (paths * numbins); i++ ) {
+            if (range > 2) {
+                mag = (abs(pipe[pipeptr].vector[i]) - min) / range + 0.0001;
+                mag = 1 + 2 * log10(mag);
+                if (mag < 0) mag = 0;
+            } else
+                mag = 0;
+            videodata[(i + paths * numbins / 2)/2] = 255*mag;
+        }
+    }
+    set_video(videodata, (paths * numbins), false);
+    videodata.next();
+
+//	set_scope(scopedata, twosym);
+// 64 data points is sufficient to show the signal progression through the
+// convolution filter.
+    memset(scopedata, 0, SCOPESIZE * sizeof(double));
+    if (!progStatus.sqlonoff || metric >= progStatus.sldrSquelchValue) {
+        for (unsigned int i = 0, j = 0; i < SCOPESIZE; i++) {
+            j = (pipeptr + i * twosym / SCOPESIZE + 1) % (twosym);
+            scopedata[i] = vidfilter[i]->run(abs(pipe[j].vector[prev1symbol]));
+        }
+    }
+    set_scope(scopedata, SCOPESIZE);
+    scopedata.next();
+*/
+}
+
+void dominoex::synchronize() {
+//	int syn = -1;
+    double syn = -1;
+    double val, max = 0.0;
+
+    if (staticburst == true) return;
+
+    if (currsymbol == prev1symbol)
+        return;
+    if (prev1symbol == prev2symbol)
+        return;
+
+    for (unsigned int i = 0, j = pipeptr; i < twosym; i++) {
+        //Android old complex class
+        //val = abs(pipe[j].vector[prev1symbol]);
+        val = (pipe[j].vector[prev1symbol]).mag();
+        if (val > max) {
+            max = val;
+            syn = i;
+        }
+        j = (j + 1) % twosym;
+    }
+
+    syn = syncfilter->run(syn);
+
+    synccounter += (int) floor(1.0 * (syn - symlen) / NUMTONES + 0.5);
+
+    update_syncscope();
+}
+
+void dominoex::eval_s2n() {
+    //Android old complex class
+    //double s = abs(pipe[pipeptr].vector[currsymbol]);
+    double s = (pipe[pipeptr].vector[currsymbol]).mag();
+    //Android old complex class
+    //double n = (NUMTONES - 1 ) * abs(pipe[(pipeptr + symlen) % twosym].vector[currsymbol]);
+    double n = (NUMTONES - 1) * (pipe[(pipeptr + symlen) % twosym].vector[currsymbol].mag());
+
+    sig = decayavg(sig, s, abs(s - sig) > 4 ? 4 : 32);
+    noise = decayavg(noise, n, 64);
+
+    if (noise)
+        s2n = 20 * log10(sig / noise) - 6;
+    else
+        s2n = 0;
+
+//	metric = 4 * s2n;
+    // To partially offset the increase of noise by (THORNUMTONES -1)
+    // in the noise calculation above,
+    // add 15*log10(THORNUMTONES -1) = 18.4, and multiply by 6
+    metric = 6 * (s2n + 18.4);
+
+    metric = metric < 0 ? 0 : metric > 100 ? 100 : metric;
+
+    display_metric(metric);
+
+    //Android snprintf(dommsg, sizeof(dommsg), "s/n %3.0f dB", s2n );
+    //Android put_Status1(dommsg);
+}
+
+//Android
+//int dominoex::rx_process(const double *buf, int len)
+int dominoex::rx_process(const short *buf, int len) {
+    cmplx zref, z, *zp;
+    cmplx zarray[1];
+    int n;
+
+    if (filter_reset) reset_filters();
+
+    if (slowcpu != progdefaults.slowcpu) {
+        slowcpu = progdefaults.slowcpu;
+        reset_filters();
+    }
+
+    while (len) {
+// create analytic signal at first IF
+        //Android
+        //zref = cmplx( *buf, *buf );
+        zref = cmplx((double) *buf, (double) *buf);
+        buf++;
+        hilbert->run(zref, zref);
+        zref = mixer(0, zref);
+
+        if (progdefaults.DOMINOEX_FILTER) {
+// filter using fft convolution
+            n = fft->run(zref, &zp);
+        } else {
+            zarray[0] = zref;
+            zp = zarray;
+            n = 1;
+        }
+
+        if (n) {
+            for (int i = 0; i < n; i++) {
+// process MAXFFTS sets of sliding FFTs spaced at 1/MAXFFTS bin intervals each of which
+// is a matched filter for the current symbol length
+                for (int j = 0; j < paths; j++) {
+// shift in frequency to base band for the sliding DFTs
+                    z = mixer(j + 1, zp[i]);
+// copy current vector to the pipe interleaving the FFT vectors
+                    binsfft[j]->run(z, pipe[pipeptr].vector + j, paths);
+                }
+                if (--synccounter <= 0) {
+                    synccounter = symlen;
+                    currsymbol = harddecode();
+                    decodesymbol();
+                    synchronize();
+//					update_syncscope();
+                    eval_s2n();
+                    prev2symbol = prev1symbol;
+                    prev1symbol = currsymbol;
+                }
+                pipeptr++;
+                if (pipeptr >= twosym)
+                    pipeptr = 0;
+            }
+        }
+        --len;
+    }
+
+    return 0;
+}
+
+//=====================================================================
+// dominoex tx modules
+
+int dominoex::get_secondary_char() {
+    static unsigned int cptr = 0;
+    char chr;
+    if (cptr >= strSecXmtText.length()) cptr = 0;
+    chr = strSecXmtText[cptr++];
+    //Android not used put_sec_char( chr );
+    return chr;
+}
+
+void dominoex::sendtone(int tone, int duration) {
+    double f, phaseincr;
+    f = (tone + 0.5) * tonespacing + get_txfreq_woffset() - bandwidth / 2.0;
+    phaseincr = TWOPI * f / samplerate;
+    for (int j = 0; j < duration; j++) {
+        for (int i = 0; i < symlen; i++) {
+            outbuf[i] = cos(txphase);
+            txphase -= phaseincr;
+            if (txphase < 0) txphase += TWOPI;
+        }
+        ModulateXmtr(outbuf, symlen);
+    }
+}
+
+void dominoex::sendsymbol(int sym) {
+//static int first = 0;
+    cmplx z;
+    int tone;
+
+    tone = (txprevtone + 2 + sym) % NUMTONES;
+    txprevtone = tone;
+    if (reverse)
+        tone = (NUMTONES - 1) - tone;
+    sendtone(tone, 1);
+}
+
+void dominoex::sendchar(unsigned char c, int secondary) {
+    if (progdefaults.DOMINOEX_FEC)
+        sendMuPskEX(c, secondary);
+    else {
+        unsigned char *code = dominoex_varienc(c, secondary);
+        sendsymbol(code[0]);
+// Continuation nibbles all have the MSB set
+        for (int sym = 1; sym < 3; sym++) {
+            if (code[sym] & 0x8)
+                sendsymbol(code[sym]);
+            else
+                break;
+        }
+    }
+    if (!secondary)
+        put_echo_char(c);
+}
+
+void dominoex::sendidle() {
+    sendchar(0, 1);    // <NUL>
+}
+
+void dominoex::sendsecondary() {
+    int c = get_secondary_char();
+    sendchar(c & 0xFF, 1);
+}
+
+void dominoex::flushtx() {
+    if (progdefaults.DOMINOEX_FEC)
+        MuPskFlushTx();
+    else {
+        // flush the varicode decoder at the receiver end
+        for (int i = 0; i < 4; i++)
+            sendidle();
+    }
+}
+
+int dominoex::tx_process() {
+    int i;
+
+    switch (txstate) {
+        case TX_STATE_PREAMBLE:
+            if (progdefaults.DOMINOEX_FEC)
+                MuPskClearbits();
+            sendidle();
+            txstate = TX_STATE_START;
+            break;
+        case TX_STATE_START:
+            sendchar('\r', 0);
+            if (mode != MODE_DOMINOEXMICRO) {
+                sendchar(2, 0);		// STX
+                sendchar('\r', 0);
+            }
+            txstate = TX_STATE_DATA;
+            break;
+        case TX_STATE_DATA:
+            i = get_tx_char();
+            if (i == GET_TX_CHAR_NODATA)
+                sendsecondary();
+            else if (i == GET_TX_CHAR_ETX)
+                txstate = TX_STATE_END;
+            else
+                sendchar(i, 0);
+            if (stopflag)
+                txstate = TX_STATE_END;
+            break;
+        case TX_STATE_END:
+            sendchar('\r', 0);
+            if (mode != MODE_DOMINOEXMICRO) {
+                sendchar(4, 0);		// EOT
+                sendchar('\r', 0);
+            }
+            txstate = TX_STATE_FLUSH;
+            break;
+        case TX_STATE_FLUSH:
+            flushtx();
+            cwid();
+            return -1;
+    }
+    return 0;
+}
+
+//=============================================================================
+// MultiPsk compatible FEC methods
+//=============================================================================
+
+//=============================================================================
+// Varicode support methods
+// MultiPsk varicode is based on a modified MFSK varicode table in which
+// Character substition is used for secondary text.  The resulting table does
+// NOT contain the full ASCII character set as the primary.  Many of the
+// control codes and characters above 0x80 are lost.
+//=============================================================================
+
+// Convert from Secondary to Primary character
+
+unsigned char dominoex::MuPskSec2Pri(int c) {
+    if (c >= 'a' && c <= 'z') c -= 32;
+
+    c = mupsksec2pri.find(c) != mupsksec2pri.end() ? mupsksec2pri[c] : c;
+
+    if (c >= 'A' && c <= 'Z') c = c - 'A' + 127;
+    else if (c >= '0' && c <= '9') c = c - '0' + 14;
+    else if (c >= ' ' && c <= '"') c = c - ' ' + 1;
+    else if (c == '_') c = 4;
+    else if (c >= '$' && c <= '&') c = c - '$' + 5;
+    else if (c >= '\'' && c <= '*') c = c - '\'' + 9;
+    else if (c >= '+' && c <= '/') c = c - '+' + 24;
+    else if (c >= ':' && c <= '<') c = c - ':' + 29;
+    else if (c >= '=' && c <= '@') c = c - '=' + 153;
+    else if (c >= '[' && c <= ']') c = c - '[' + 157;
+    else c = '_';
+
+    return c;
+}
+
+// Convert Primary to Split Primary / Secondary character
+
+unsigned int dominoex::MuPskPriSecChar(unsigned int c) {
+    if (c >= 127 && c < 153) c += ('A' - 127) + 0x100;
+    else if (c >= 14 && c < 24) c += ('0' - 14) + 0x100;
+    else if (c >= 1 && c < 4) c += (' ' - 1) + 0x100;
+    else if (c == 4) c = '_' + 0x100;
+    else if (c >= 5 && c < 8) c += ('$' - 5) + 0x100;
+    else if (c >= 9 && c < 13) c += ('\'' - 9) + 0x100;
+    else if (c >= 24 && c < 29) c += ('+' - 24) + 0x100;
+    else if (c >= 29 && c < 32) c += (':' - 29) + 0x100;
+    else if (c >= 153 && c < 157) c += ('=' - 153) + 0x100;
+    else if (c >= 157 && c < 160) c += ('[' - 157) + 0x100;
+    return c;
+}
+
+//=============================================================================
+// Receive
+//=============================================================================
+
+void dominoex::decodeMuPskSymbol(unsigned char symbol) {
+    int c, ch, met;
+
+    Mu_symbolpair[0] = Mu_symbolpair[1];
+    Mu_symbolpair[1] = symbol;
+
+    Mu_symcounter = Mu_symcounter ? 0 : 1;
+
+    if (Mu_symcounter) return;
+
+    c = MuPskDec->decode(Mu_symbolpair, &met);
+
+    if (c == -1)
+        return;
+
+    //Android
+    //if (progStatus.sqlonoff && metric < progStatus.sldrSquelchValue)
+    if (metric < sldrSquelchValue)
+        return;
+
+    Mu_datashreg = (Mu_datashreg << 1) | !!c;
+    if ((Mu_datashreg & 7) == 1) {
+        ch = varidec(Mu_datashreg >> 1);
+        if (progdefaults.DOMINOEX_FEC)
+            recvchar(MuPskPriSecChar(ch));
+        Mu_datashreg = 1;
+    }
+}
+
+void dominoex::decodeMuPskEX(int ch) {
+    unsigned char symbols[4];
+    int c = ch;
+
+    for (int i = 0; i < 4; i++) {
+        if ((c & 1) == 1) symbols[3 - i] = 255;
+        else symbols[3 - i] = 1;//-255;
+        c = c / 2;
+    }
+    if (staticburst == true || outofrange == true)
+        symbols[3] = symbols[2] = symbols[1] = symbols[0] = 0;
+
+    MuPskRxinlv->symbols(symbols);
+
+    for (int i = 0; i < 4; i++) decodeMuPskSymbol(symbols[i]);
+
+}
+
+//=============================================================================
+// Transmit
+//=============================================================================
+
+void dominoex::MuPskFlushTx() {
+// flush the varicode decoder at the other end
+// flush the convolutional encoder and interleaver
+    sendsymbol(1);
+    for (int i = 0; i < 107; i++)
+        sendsymbol(0);
+    Mu_bitstate = 0;
+}
+
+void dominoex::MuPskClearbits() {
+    int data = MuPskEnc->encode(0);
+    for (int k = 0; k < 100; k++) {
+        for (int i = 0; i < 2; i++) {
+            bitshreg = (bitshreg << 1) | ((data >> i) & 1);
+            Mu_bitstate++;
+
+            if (Mu_bitstate == 4) {
+                MuPskTxinlv->bits(&bitshreg);
+                Mu_bitstate = 0;
+                bitshreg = 0;
+            }
+        }
+    }
+}
+
+// Send MultiPsk FEC varicode with minimalist interleaver
+
+void dominoex::sendMuPskEX(unsigned char c, int secondary) {
+    const char *code;
+    if (secondary == 1)
+        c = MuPskSec2Pri(c);
+    else {
+        if (c == 10)
+            return;
+        if ((c >= 1 && c <= 7) || (c >= 9 && c <= 12) || (c >= 14 && c <= 31) ||
+            (c >= 127 && c <= 159))
+            c = '_';
+    }
+    code = varienc(c);
+    // if (secondary == 0)
+    // 	LOG_DEBUG("char=%hhu, code=\"%s\"", c, code);
+    while (*code) {
+        int data = MuPskEnc->encode(*code++ - '0');
+        // LOG_DEBUG("data=%d", data;
+        for (int i = 0; i < 2; i++) {
+            bitshreg = (bitshreg << 1) | ((data >> i) & 1);
+            Mu_bitstate++;
+            if (Mu_bitstate == 4) {
+
+                MuPskTxinlv->bits(&bitshreg);
+
+                // LOG_DEBUG("bitshreg=%d", bitshreg);
+
+                sendsymbol(bitshreg);
+
+                // decodeMuPskEX(bitshreg);
+
+                Mu_bitstate = 0;
+                bitshreg = 0;
+            }
+        }
+    }
+}

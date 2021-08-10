@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>HICS-206</TITLE>
+<META NAME="AUTHOR" CONTENT="w1hkj">
+<META NAME="CREATED" CONTENT="20111027">
+<STYLE type="text/css">
+p.F2 { FONT-FAMILY: "sans-serif"; FONT-SIZE: 10pt }
+p.F3 { FONT-FAMILY: "sans-serif"; FONT-SIZE: 12pt }
+p.F4 { FONT-FAMILY: "monospace"; FONT-SIZE: 12pt }
+</STYLE>
+</HEAD>
+<BODY>
+<FORM>
+<TABLE WIDTH=100% cellpadding="2" cellspacing="0" border="1">
+<COL WIDTH=18%>
+<COL WIDTH=8%>
+<COL WIDTH=6%>
+<COL WIDTH=18%>
+<COL WIDTH=4%>
+<COL WIDTH=4%>
+<COL WIDTH=10%>
+<COL WIDTH=6%>
+<COL WIDTH=26%>
+<tr>
+<td COLSPAN=9><p class=F3>
+<b>HICS 206 - STAFF MEDICAL PLAN</b></p>
+</td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=3><p class=F2>
+<b>1. INCIDENT NAME</b>
+<br><INPUT NAME=":1:" TYPE="text" SIZE=30 MAXLENGTH=80>
+</p>
+</td>
+<td><p class=F2>
+<b>2. DATE PREPARED</b>
+<br><INPUT NAME=":2:" TYPE="text" SIZE=20 MAXLENGTH=40> <INPUT TYPE="button" onclick="dateprefill(':2:')" VALUE="...">
+</p>
+</td>
+<td COLSPAN=3><p class=F2>
+<b>3. TIME PREPARED</b>
+<br><INPUT NAME=":3:" TYPE="text" SIZE=12 MAXLENGTH=25> <INPUT TYPE="button" onclick="timeprefill(':3:')" VALUE="...">
+</p>
+</td>
+<td COLSPAN=2><p class=F2>
+<b>4. OPERATIONAL PERIOD DATE/TIME</b>
+<br><INPUT NAME=":4:" TYPE="text" SIZE=50 MAXLENGTH=100>
+</p>
+</td>
+</tr>
+<tr>
+<td COLSPAN=9>
+<p class=F2>
+<b>5. TREATMENT OF INJURED / STAFF</b></p>
+</td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=4><p class=F2>
+<b>Location of Staff Treatment Area</b>
+<br><INPUT NAME=":5:" TYPE="text" SIZE=35 MAXLENGTH=100><br>
+</p></td>
+<td COLSPAN=5><p class=F2>
+<b>Contact Information</b>
+<br><INPUT NAME=":6:" TYPE="text" SIZE=35 MAXLENGTH=100><br>
+</p></td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=4><p class=F2>
+<b>Treatment Area Team Leader</b>
+<br><INPUT NAME=":7:" TYPE="text" SIZE=35 MAXLENGTH=100><br>
+</p>
+</td>
+<td COLSPAN=5><p class=F2>
+<b>Contact Information</b>
+<br><INPUT NAME=":8:" TYPE="text" SIZE=35 MAXLENGTH=100><br>
+</p>
+</td>
+</tr>
+<tr>
+<td COLSPAN=9><p class=F2>
+<b>Special Instructions</b></p>
+<pre><p class=F4><TEXTAREA NAME=":9:" ROWS=10 COLS=52></TEXTAREA></p></pre>
+</td>
+</tr>
+<tr>
+<td COLSPAN=9><p class=F2><b>6. RESOURCES ON HAND</b></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=2><p class=F2>
+<b>STAFF</b>
+</p>
+</td>
+<td COLSPAN=3>
+<p class=F2>
+<b>MEDICAL TRANSPORTATION </b>
+</p>
+</td>
+<td COLSPAN=3>
+<p class=F2>
+<b>MEDICATION </b>
+</p>
+</td>
+<td>
+<p class=F2>
+<b>SUPPLIES</b>
+</p>
+</td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=2><p class=F2>MD/DO: <INPUT NAME=":10:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2>Litters: <INPUT NAME=":11:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2><INPUT NAME=":12:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td><p class=F2><INPUT NAME=":13:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=2><p class=F2>PA/NP: <INPUT NAME=":14:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2>Portable <INPUT NAME=":15:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2><INPUT NAME=":16:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td><p class=F2><INPUT NAME=":17:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=2><p class=F2>RN/LPN: <INPUT NAME=":18:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2>Transport: <INPUT NAME=":19:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2><INPUT NAME=":20:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td><p class=F2><INPUT NAME=":21:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=2><p class=F2>Technicians/CN: <INPUT NAME=":22:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2>Wheelchairs: <INPUT NAME=":23:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2><INPUT NAME=":24:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td><p class=F2><INPUT NAME=":25:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td COLSPAN=2><p class=F2>Ancillary/Other: <INPUT NAME=":26:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2>Transport/Others:<INPUT NAME=":27:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td COLSPAN=3><p class=F2><INPUT NAME=":28:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+<td><p class=F2><INPUT NAME=":29:" TYPE="text" SIZE=55 MAXLENGTH=120></p></td>
+</tr>
+<tr>
+<td COLSPAN=9><p class=F2><b>7. ALTERNATE CARE SITE(S)</b></p></td>
+</tr>
+<tr>
+<td ALIGN=CENTER><p class=F2><b>NAME</b></p></td>
+<td COLSPAN=5 ALIGN=CENTER><p class=F2><b>ADDRESS</b></p></td>
+<td COLSPAN=2 ALIGN=CENTER><p class=F2><b>PHONE</b></p></td>
+<td ALIGN=CENTER><p class=F2><b>SPECIALTY CARE</b></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td><p class=F2><INPUT NAME=":30:" TYPE="text" SIZE=24 MAXLENGTH=80><br></p></td>
+<td COLSPAN=5><p class=F2><INPUT NAME=":31:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+<td COLSPAN=2><p class=F2><INPUT NAME=":32:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+<td><p class=F2><INPUT NAME=":33:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td><p class=F2><INPUT NAME=":34:" TYPE="text" SIZE=24 MAXLENGTH=80><br></p></td>
+<td COLSPAN=5><p class=F2><INPUT NAME=":35:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+<td COLSPAN=2><p class=F2><INPUT NAME=":36:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+<td><p class=F2><INPUT NAME=":37:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td><p class=F2><INPUT NAME=":38:" TYPE="text" SIZE=24 MAXLENGTH=80><br></p></td>
+<td COLSPAN=5><p class=F2><INPUT NAME=":39:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+<td COLSPAN=2><p class=F2><INPUT NAME=":40:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+<td><p class=F2><INPUT NAME=":41:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+</tr>
+<tr VALIGN=TOP>
+<td><p class=F2><INPUT NAME=":42:" TYPE="text" SIZE=24 MAXLENGTH=80><br></p></td>
+<td COLSPAN=5><p class=F2><INPUT NAME=":43:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+<td COLSPAN=2><p class=F2><INPUT NAME=":44:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+<td><p class=F2><INPUT NAME=":45:" TYPE="text" SIZE=24 MAXLENGTH=80></p></td>
+</tr>
+<tr>
+<td COLSPAN=9><p class=F2>
+<b>8. PREPARED BY (SUPPORT BRANCH DIRECTOR):</b> <INPUT NAME=":46:" TYPE="text" SIZE=24 MAXLENGTH=80>
+</p>
+</td>
+</tr>
+<tr>
+<td COLSPAN=9><p class=F2>
+<b>9. FACILITY NAME</b> <INPUT NAME=":47:" TYPE="text" SIZE=24 MAXLENGTH=80>
+</p>
+</td>
+</tr>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>

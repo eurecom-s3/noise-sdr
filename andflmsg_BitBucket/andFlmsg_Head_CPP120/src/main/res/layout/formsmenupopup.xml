@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+			android:orientation="vertical" 
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent" 
+			android:weightSum="1"
+		    android:background="#F0000040">
+			<LinearLayout
+			    android:id="@+id/FrameLayout3"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.02"
+			    android:orientation="horizontal"
+			    android:weightSum="1" >
+			    <Button
+			        android:id="@+id/button_transferoverradio"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_TransferFormOnly" >
+			    </Button>
+			    <Button
+			        android:id="@+id/button_shareoverinternet"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_Share" >
+			    </Button>
+   			    <Button
+			        android:id="@+id/button_return"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_Return" >
+			    </Button>
+			</LinearLayout>
+			<WebView  
+				android:id="@+id/htmlwebview1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.98" 
+				android:focusable="true"
+				android:focusableInTouchMode="true" 
+			/>
+			<requestFocus />
+			</LinearLayout>
+
+

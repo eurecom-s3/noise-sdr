@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1" 
+	android:id="@+id/termscreen" >
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/minsec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_0000"
+            android:textSize="30sp" >
+
+        </TextView>
+	
+    <ScrollView
+        android:id="@+id/terminalscrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.00" >
+
+        <TextView
+            android:textIsSelectable="true"
+            android:id="@+id/terminalview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:text="@string/txt_TerminalScreen" >
+        </TextView>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/FrameLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08"
+        android:weightSum="1" >
+
+        <EditText
+            android:id="@+id/edit_text_out"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.72"
+            android:maxLines="3"
+            android:textSize="10pt" >
+            <requestFocus >
+            </requestFocus>
+        </EditText>
+
+        <Button
+            android:id="@+id/button_sendtext"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:layout_weight="0.14"
+            android:text="@string/bt_SendText" >
+
+        </Button>
+        </LinearLayout>
+
+</LinearLayout>

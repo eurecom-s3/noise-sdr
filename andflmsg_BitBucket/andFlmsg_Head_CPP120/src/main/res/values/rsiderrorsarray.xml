@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+   
+    <string-array name="rsid_errors_list">
+        <item>@string/values_VeryHigh</item>
+        <item>@string/values_High</item>
+        <item>@string/values_Medium</item>
+        <item>@string/values_Low</item>
+        </string-array>
+    
+    <string-array name="rsid_errors_values">
+        <item>4</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+        </string-array>
+    
+    
+</resources>

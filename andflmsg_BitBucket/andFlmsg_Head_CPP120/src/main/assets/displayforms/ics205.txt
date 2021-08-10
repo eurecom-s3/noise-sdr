@@ -1,0 +1,61 @@
+ICS 205 INCIDENT RADIO COMMUNICATIONS PLAN
+
+Incident name: :nam:
+Date/Time Prepared: :dt1:
+Operational Period Date/Time from: :dt3:
+Operational Period Date/Time to: :dt3:
+
+Function #1: :func00:
+Channel #1: :chan00:
+Assignment #1: :asgn00:
+Rx Freq/Tone #1: :rxfq00: :rxtn00:
+Tx Freq/Tone #1: :txfq00: :txtn00:
+Assignment #1: :mode00:
+Remarks #1: :rmrk00:
+
+Function #2: :func01:
+Channel #2: :chan01:
+Assignment #2: :asgn01:
+Rx Freq/Tone #2: :rxfq01: :rxtn01:
+Tx Freq/Tone #2: :txfq01: :txtn01:
+Assignment #2: :mode01:
+Remarks #2: :rmrk01:
+
+Function #3: :func02:
+Channel #3: :chan02:
+Assignment #3: :asgn02:
+Rx Freq/Tone #3: :rxfq02: :rxtn02:
+Tx Freq/Tone #3: :txfq02: :txtn02:
+Assignment #3: :mode02:
+Remarks #3: :rmrk02:
+
+Function #4: :func03:
+Channel #4: :chan03:
+Assignment #4: :asgn03:
+Rx Freq/Tone #4: :rxfq03: :rxtn03:
+Tx Freq/Tone #4: :txfq03: :txtn03:
+Assignment #4: :mode03:
+Remarks #4: :rmrk03:
+
+Function #5: :func04:
+Channel #5: :chan04:
+Assignment #5: :asgn04:
+Rx Freq/Tone #5: :rxfq04: :rxtn04:
+Tx Freq/Tone #5: :txfq04: :txtn04:
+Assignment #5: :mode04:
+Remarks #5: :rmrk04:
+
+Function #6: :func05:
+Channel #6: :chan05:
+Assignment #6: :asgn05:
+Rx Freq/Tone #6: :rxfq05: :rxtn05:
+Tx Freq/Tone #6: :txfq05: :txtn05:
+Assignment #6: :mode05:
+Remarks #6: :rmrk05:
+
+
+Prepared by (Communications unit): :prp:
+County: :cnty:
+State: :stat:
+Latitude: :lat:
+Longitude: :lon:

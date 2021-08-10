@@ -1,0 +1,73 @@
+ICS 203 ORGANIZATION ASSIGNMENT LIST
+
+incident: :inc:
+date: :dat:
+time: :tim:
+op_period: :opp:
+incident_commander: :icc:
+incident_deputy: :icd:
+incident_safety_officer: :ics:
+incident_info_officer: :ici:
+liaison_officer: :icl:
+prepared_by: :pre:
+agency: :agency[0]:, name: :agency_name[0]:
+agency: :agency[1]:, name: :agency_name[1]:
+agency: :agency[2]:, name: :agency_name[2]:
+agency: :agency[3]:, name: :agency_name[3]:
+agency: :agency[4]:, name: :agency_name[4]:
+agency: :agency[5]:, name: :agency_name[5]:
+agency: :agency[6]:, name: :agency_name[6]:
+planning_chief: :planning_chief:
+planning_deputy: :planning_deputy:
+resources_unit: :resources_unit:
+situation_unit: :situation_unit:
+documentation_unit: :documentation_unit:
+demobilization_unit: :demobilization_unit:
+tech_spc: :tech_spc[0]:
+tech_spc: :tech_spc[1]:
+tech_spc: :tech_spc[2]:
+logistics_chief: :logistics_chief:
+logistics_deputy: :logistics_deputy:
+support_director: :support_director:
+supply_unit: :supply_unit:
+facilities_unit: :facilities_unit:
+ground_support: :ground_support:
+service_director: :service_director:
+communications_unit: :communications_unit:
+medical_unit: :medical_unit:
+food_unit: :food_unit:
+ops_chief: :ops_chief:
+ops_deputy: :ops_deputy:
+b1_director: :b1_director:
+b1_deputy: :b1_deputy:
+b1_div/grp: :b1_div[0]:, :b1_grp[0]:
+b1_div/grp: :b1_div[1]:, :b1_grp[1]:
+b1_div/grp: :b1_div[2]:, :b1_grp[2]:
+b1_div/grp: :b1_div[3]:, :b1_grp[3]:
+b1_div/grp: :b1_div[4]:, :b1_grp[4]:
+b2_director: :b2_director:
+b2_deputy: :b2_deputy:
+b2_div/grp: :b2_div[0]:, :b2_grp[0]:
+b2_div/grp: :b2_div[1]:, :b2_grp[1]:
+b2_div/grp: :b2_div[2]:, :b2_grp[2]:
+b2_div/grp: :b2_div[3]:, :b2_grp[3]:
+b2_div/grp: :b2_div[4]:, :b2_grp[4]:
+b3_director: :b3_director:
+b3_deputy: :b3_deputy:
+b3_div/grp: :b3_div[0]:, :b3_grp[0]:
+b3_div/grp: :b3_div[1]:, :b3_grp[1]:
+b3_div/grp: :b3_div[2]:, :b3_grp[2]:
+b3_div/grp: :b3_div[3]:, :b3_grp[3]:
+b3_div/grp: :b3_div[4]:, :b3_grp[4]:
+air_ops_br_dir: :air_ops_br_dir:
+air_tactical_group_sup: :air_tactical_group_sup:
+air_support_group_sup: :air_support_group_sup:
+helicopter_coordinator: :helicopter_coordinator:
+air_tanker_fixed_wing: :air_tanker_fixed_wing:
+finance_chief: :finance_chief:
+finance_deputy: :finance_deputy:
+time_unit: :time_unit:
+procurement_unit: :procurement_unit:
+claims_unit: :claims_unit:
+cost_unit: :cost_unit:
+

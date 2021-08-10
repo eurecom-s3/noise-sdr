@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+ android:orientation="vertical" 
+ android:id="@+id/arlmsgslayout"
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="350dp"
+ android:layout_height="wrap_content">
+
+	<Spinner 
+	 android:id="@+id/arlmsgsspinner"
+	 style="?android:attr/spinnerDropDownItemStyle"
+	 android:layout_width="match_parent"
+	 android:layout_height="wrap_content"
+	 android:ellipsize="none"
+	 android:gravity="center_vertical"
+	 android:singleLine="false" />
+	
+     <EditText
+         android:id="@+id/parameter1"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:maxLines="1"
+         android:textSize="9pt" >
+     </EditText>
+     <EditText
+         android:id="@+id/parameter2"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:maxLines="1"
+         android:textSize="9pt" >
+     </EditText>
+          <EditText
+         android:id="@+id/parameter3"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:maxLines="1"
+         android:textSize="9pt" >
+     </EditText>
+          <EditText
+         android:id="@+id/parameter4"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:maxLines="1"
+         android:textSize="9pt" >
+     </EditText>
+          	
+</LinearLayout>

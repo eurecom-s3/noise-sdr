@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>:TITLE:</title>
+</head>
+<body>
+<FORM>
+<table width=950px border=1 cellpadding=1 cellspacing=0>
+<tbody>
+<tr>
+  <td colspan=7 ALIGN=left VALIGN=top><b>1. Incident name</b><br><INPUT NAME=":inc:" TYPE="text" SIZE=52 MAXLENGTH=110></td>
+  <td colspan=4 ALIGN=left VALIGN=top><b>2.From Date / Time:</b><br><INPUT NAME=":dfm:" TYPE="text" SIZE=20 MAXLENGTH=40>  <INPUT TYPE="button" onclick="dateprefill(':dfm:')" VALUE="..."><br><INPUT NAME=":tfm:" TYPE="text" SIZE=12 MAXLENGTH=25> <INPUT TYPE="button" onclick="timeprefill(':tfm:')" VALUE="..."></td>
+  <td colspan=4 ALIGN=left VALIGN=top><b>3.To Date / Time:  </b><br><INPUT NAME=":dto:" TYPE="text" SIZE=20 MAXLENGTH=40>  <INPUT TYPE="button" onclick="dateprefill(':dto:')" VALUE="..."><br><INPUT NAME=":tto:" TYPE="text" SIZE=12 MAXLENGTH=25> <INPUT TYPE="button" onclick="timeprefill(':tto:')" VALUE="..."></td>
+  <td colspan=5 ALIGN=right VALIGN=top  BGCOLOR=#EEFFFF><b>COMMUNICATIONS LIST<br>(ICS-205A)</b></td>
+</tr>
+    <tr BGCOLOR=#EEFFFF>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+      <td WIDTH=5% HEIGHT= 0></td><td WIDTH=5% HEIGHT= 0></td>
+    </tr>
+    <tr>
+      <td colspan=20 ALIGN=left VALIGN=top>
+      <b>4. Basic Local Communications Info</b>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=3 ALIGN=center VALIGN=top><br><b>Assignment</b></td>
+      <td colspan=4 ALIGN=center VALIGN=top><b><br>Name</b><br></td>
+      <td colspan=13 ALIGN=center VALIGN=top>
+      <b>Methods of Contact</b><br>(radio frequency, phone, pager, cell, etc.)</b>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[0]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[0]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=13 VALIGN=top><INPUT NAME=":inf[0]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[1]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[1]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[1]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[2]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[2]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[2]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[3]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[3]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[3]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[4]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[4]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[4]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[5]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[5]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[5]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[6]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[6]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[6]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[7]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[7]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[7]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[8]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[8]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[8]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[9]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[9]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[9]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[10]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[10]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[10]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[11]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[11]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[11]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[12]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[12]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[12]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[13]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[13]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[13]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[14]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[14]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[14]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[15]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[15]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[15]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[16]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[16]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[16]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[17]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[17]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[17]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[18]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[18]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[18]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[19]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[19]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[19]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[20]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[20]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[20]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[21]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[21]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[21]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[22]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[22]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[22]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[23]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[23]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[23]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[24]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[24]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[24]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[25]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[25]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[25]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[26]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[26]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[26]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[27]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[27]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[27]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[28]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[28]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[28]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[29]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[29]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[29]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[30]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[30]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[30]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=3 VALIGN=top><INPUT NAME=":asg[31]:" TYPE="text" SIZE=14 MAXLENGTH=35></td>
+      <td colspan=4 VALIGN=top><INPUT NAME=":nam[31]:" TYPE="text" SIZE=18 MAXLENGTH=40></td>
+      <td colspan=8 VALIGN=top><INPUT NAME=":inf[31]:" TYPE="text" SIZE=33 MAXLENGTH=80></td>
+    </tr>
+    <tr>
+      <td colspan=8 VALIGN=top>5. Prepared by:<br><INPUT NAME=":pre:" TYPE="text" SIZE=52 MAXLENGTH=110></td>
+      <td colspan=6 VALIGN=top>Position/Title:<br><INPUT NAME=":pos:" TYPE="text" SIZE=52 MAXLENGTH=110></td>
+      <td colspan=6 VALIGN=top>Date time:<br><INPUT NAME=":dtm:" TYPE="text" SIZE=33 MAXLENGTH=80> <INPUT TYPE="button" onclick="datetimeprefill(':dtm:')" VALUE="..."></td>
+    </tr>
+    <tr>
+      <td colspan=4 ALIGN=center VALIGN=middle>ICS-205A</td>
+      <td colspan=4 VALIGN=top>IAP Page</td>
+      <td colspan=12 VALIGN=top>Signature:<br><br></td>
+    </tr>
+</tbody>
+</table>
+</FORM>
+</body></html>

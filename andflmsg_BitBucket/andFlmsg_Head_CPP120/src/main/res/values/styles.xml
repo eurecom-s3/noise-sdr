@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<color name="complete_black">#FF000000</color>
+	<color name="complete_white">#FFFFFFFF</color>
+	<color name="some_green">#14a805</color>
+    <color name="icon_yellow">#FFf6ff33</color>
+
+
+	<!-- Alias for Theme.AppCompat -->
+    <style name="andFlmsgStandard" parent="Theme.AppCompat">
+    </style>
+
+    
+	<!-- Custom Application theme - in fact Alias for Theme.AppCompat.Light -->
+    <style name="andFlmsgStandardLight" parent="Theme.AppCompat.Light">
+              	<item name="android:windowBackground">@color/complete_white</item>
+				<item name="android:background">@color/complete_white</item>
+      			<item name="android:colorBackground">@color/complete_white</item>
+    </style>
+    
+    
+    <!-- Custom Application theme - in fact Alias for Theme.AppCompat.Dark but with full back windows -->
+    <style name="andFlmsgStandardDark" parent="Theme.AppCompat">
+              	<item name="android:windowBackground">@color/complete_black</item>
+				<item name="android:background">@color/complete_black</item>
+      			<item name="android:colorBackground">@color/complete_black</item>
+    </style>
+    
+
+    <!-- Customized Application theme for small screens (Reduces the height of the action 
+          bar and uses the custom 3 horizontal dots overflow/menu icon. -->
+    <style name="andFlmsgSmallScreen" parent="Theme.AppCompat">
+        <!-- Pointer to Overflow style ***MUST*** go here or it will not work -->
+        <item name="android:actionOverflowButtonStyle" tools:targetApi="21">@style/AppTheme.OverFlow</item>
+        <item name="actionOverflowButtonStyle" >@style/AppTheme.OverFlow</item>
+<!--
+-->
+         <!--Action bar style-->
+        <item name="android:actionBarStyle" tools:targetApi="21">@style/AppTheme.ActionBar</item>
+        <item name="actionBarStyle" >@style/AppTheme.ActionBar</item>
+<!-- test
+		<item name="android:background">@color/complete_black</item>
+      	<item name="android:colorBackground">@color/complete_black</item>
+-->
+      	<item name="android:windowBackground">@color/complete_black</item>
+    
+    </style>
+
+    <style name="AppTheme.OverFlow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/overflowicon</item>
+    </style>
+    
+    <style name="AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/AppTheme.ActionBar.TitleText</item>
+        <item name="android:titleTextStyle" tools:targetApi="21">@style/AppTheme.ActionBar.TitleText</item>
+        <item name="android:height">30sp</item>
+        <item name="height">30sp</item>
+        <item name="progressBarStyle">@style/ActionBarHorizontalProgressStyle</item>
+    	<item name="android:progressBarStyle">@style/ActionBarHorizontalProgressStyle</item>
+    </style>
+
+    <style name="AppTheme.ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+	<style name="ActionBarHorizontalProgressStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+<!-- debug
+   	    <item name="android:progressDrawable">@drawable/progress_horizontal_holo_light</item>
+   	    <item name="android:progressDrawable">@android:drawable/star_rating_bar_full</item>
+-->
+		<item name="android:background">@color/some_green</item>
+	    <item name="android:minHeight">15dip</item>
+	    <item name="android:maxHeight">15dip</item>
+   	</style>
+
+</resources>

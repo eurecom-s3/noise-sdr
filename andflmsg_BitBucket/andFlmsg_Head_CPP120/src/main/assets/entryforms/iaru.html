@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>iaru</title>
+<meta content="w1hkj" name="author">
+<STYLE type="text/css">
+p.F2 { FONT-FAMILY: "sans-serif"; FONT-SIZE: 8pt }
+p.F3 { FONT-FAMILY: "sans-serif"; FONT-SIZE: 14pt }
+p.F4 { FONT-FAMILY: "monospace"; FONT-SIZE: 12pt }
+p.F5 { FONT-FAMILY: "sans-serif"; FONT-SIZE: 16pt }
+p.F6 { FONT-FAMILY: "sans-serif"; FONT-SIZE: 10pt }
+</STYLE>
+</head>
+<body>
+<form>
+<table style="text-align: left; width: 100%;" border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td VALIGN=top ALIGN=center><p class=F5><b>IARU MESSAGE</b></p></td>
+</tr>
+</tbody>
+</table>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="0">
+<tr>
+<td style="vertical-align: top; text-align: center; width: 15%;">
+<p class=F2>NUMBER</p></td>
+<td style="vertical-align: top; text-align: center; width: 15%;">
+<p class=F2>PRECEDENCE</p></td>
+<td style="vertical-align: top; text-align: center; width: 20%;">
+<p class=F2>STATION OF ORIGIN</p></td>
+<td style="vertical-align: top; text-align: center; width: 10%;">
+<p class=F2>CHECK</p></td>
+<td style="vertical-align: top; text-align: center; width: 20%;">
+<p class=F2>PLACE OF ORIGIN</p></td>
+<td style="vertical-align: top; text-align: center; width: 10%;">
+<p class=F2>FILING TIME</p></td>
+<td style="vertical-align: top; text-align: center; width: 10%;">
+<p class=F2>FILING DATE</p></td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":nbr:" TYPE="text" SIZE=6 MAXLENGTH=12><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><select NAME=":prec:">
+			<OPTION VALUE="0" SELECTED>ROUTINE</OPTION>
+			<OPTION VALUE="2">PRIORITY</OPTION>
+			<OPTION VALUE="3">EMERGENCY</OPTION>
+			</SELECT><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":sta:" TYPE="text" SIZE=11 MAXLENGTH=20><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":ck:" TYPE="text" SIZE=11 MAXLENGTH=10><INPUT TYPE="button" onclick="arlmsgcheck(':msg:',':ck:','')" VALUE="CHECK"><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":org:" TYPE="text" SIZE=20 MAXLENGTH=40><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":t1:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="timeprefill(':t1:')" VALUE="..."><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":d1:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="dateprefill(':d1:')" VALUE="..."><br></p></td>
+</tr>
+</table>
+<br>
+<table width=100% border=1 cellpadding=2 cellspacing=0>
+<tr><td>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<col width = 98%><col width = 2%>
+<tr>
+	<td VALIGN=top>
+	<p class=F2><B>To:</B></p><br>
+	<pre><p class=F4><TEXTAREA NAME=":to:" ROWS=4 COLS=34></TEXTAREA></p></pre></td>
+	<td><br><br><br></td>
+</tr>
+<tr>
+	<td VALIGN=top>
+	<pre><p class=F4><TEXTAREA NAME=":msg:" ROWS=8 COLS=72></TEXTAREA></p></pre></td>
+	<td><br><br><br><br><br><br><br><br><br></td>
+</tr>
+<tr>
+	<td VALIGN=top>
+	<p class=F2><B>From:</B></p>
+	<pre><p class=F4><TEXTAREA NAME=":fm:" ROWS=8 COLS=72></TEXTAREA></p></pre></td>
+	<td><br><br><br></td>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="0">
+<tr>
+<td style="vertical-align: top; text-align: center; width: 24%;">
+<p class=F2>RECEIVED FROM</p></td>
+<td style="vertical-align: top; text-align: center; width: 10%;">
+<p class=F2>DATE</p></td>
+<td style="vertical-align: top; text-align: center; width: 10%;">
+<p class=F2>TIME</p></td>
+<td style="vertical-align: top; text-align: center; width: 4%;" ROWSPAN=2></td>
+<td style="vertical-align: top; text-align: center; width: 24%;">
+<p class=F2>SENT TO</p></td>
+<td style="vertical-align: top; text-align: center; width: 10%;">
+<p class=F2>DATE</p></td>
+<td style="vertical-align: top; text-align: center; width: 10%;">
+<p class=F2>TIME</p></td>
+<tr>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":rcv:" TYPE="text" SIZE=20 MAXLENGTH=30><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":d2:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="dateprefill(':d2:')" VALUE="..."><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":t2:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="timeprefill(':t2:')" VALUE="..."><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":sto:" TYPE="text" SIZE=20 MAXLENGTH=30><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":d3:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="dateprefill(':d3:')" VALUE="..."><br></p></td>
+<td style="vertical-align: top; text-align: center;">
+<p class=F4><INPUT NAME=":t3:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="timeprefill(':t3:')" VALUE="..."><br></p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+</form>
+</body></html>

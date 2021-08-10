@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>:TITLE:</title>
+</head>
+<body>
+<FORM>
+<table ALIGN=left WIDTH=1000px BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<tbody>
+<tr ALIGN=center>
+<td COLSPAN=2 VALIGN=middle WIDTH=200px><b>MEDICAL PLAN</b></td>
+<td VALIGN=top WIDTH=200px ALIGN=left>1. Incident Name</span><br><INPUT NAME=":nam:" TYPE="text" SIZE=30 MAXLENGTH=70><br></td>
+<td VALIGN=top ALIGN=left WIDTH=300px>2. Date Prepared<br><INPUT NAME=":dat:" TYPE="text" SIZE=12 MAXLENGTH=25> 
+<INPUT TYPE="button" onclick="dateprefill(':dat:')" VALUE="...">
+</td>
+<td VALIGN=top ALIGN=left WIDTH=300px>3. Time Prepared<br><INPUT NAME=":tim:" TYPE="text" SIZE=12 MAXLENGTH=25> 
+<INPUT TYPE="button" onclick="timeprefill(':tim:')" VALUE="...">
+</td>
+<td VALIGN=top ALIGN=left WIDTH=200px>4. Operational Period<br><INPUT NAME=":opp:" TYPE="text" SIZE=50 MAXLENGTH=100></td>
+</tr>
+</tbody>
+</table>
+<table ALIGN=left WIDTH=1000px BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<tbody>
+<tr ALIGN=center>
+<td COLSPAN=3 VALIGN=top BGCOLOR=#E9E9E9>5. Incident Medical Aid Station<br></td>
+</tr>
+<tr>
+<td VALIGN=middle>Medical Aid Stations<br></td>
+<td VALIGN=middle>Location<br></td>
+<td COLSPAN=1 VALIGN=top;>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Paramedics<br></td>
+</tr>
+<tr>
+<td VALIGN=top WIDTH=40%><INPUT NAME=":msta0:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top WIDTH=45%><INPUT NAME=":mloc0:" TYPE="text" SIZE=50 MAXLENGTH=120><br></td>
+<td VALIGN=top WIDTH=15% ALIGN=center><input type="checkbox" name=":mpar0:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top WIDTH=40%><INPUT NAME=":msta1:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top WIDTH=45%><INPUT NAME=":mloc1:" TYPE="text" SIZE=50 MAXLENGTH=120><br></td>
+<td VALIGN=top WIDTH=15% ALIGN=center><input type="checkbox" name=":mpar1:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top WIDTH=40%><INPUT NAME=":msta2:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top WIDTH=45%><INPUT NAME=":mloc2:" TYPE="text" SIZE=50 MAXLENGTH=120><br></td>
+<td VALIGN=top WIDTH=15% ALIGN=center><input type="checkbox" name=":mpar2:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top WIDTH=40%><INPUT NAME=":msta3:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top WIDTH=45%><INPUT NAME=":mloc3:" TYPE="text" SIZE=50 MAXLENGTH=120><br></td>
+<td VALIGN=top WIDTH=15% ALIGN=center><input type="checkbox" name=":mpar3:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top WIDTH=40%><INPUT NAME=":msta4:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top WIDTH=45%><INPUT NAME=":mloc4:" TYPE="text" SIZE=50 MAXLENGTH=120><br></td>
+<td VALIGN=top WIDTH=15% ALIGN=center><input type="checkbox" name=":mpar4:"><br></td>
+</tr>
+</tbody>
+</table>
+<table ALIGN=left WIDTH=1000px BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<tbody>
+<tr ALIGN=center>
+<td COLSPAN=4 VALIGN=top BGCOLOR=#E9E9E9>6. Transportation<br></td>
+</tr>
+<tr ALIGN=center>
+<td COLSPAN=4 VALIGN=top; BGCOLOR=#E9E9E9>A. Ambulance Services<br></td>
+</tr>
+<tr>
+<td VALIGN=top WIDTH=25%>Name</td>
+<td VALIGN=top WIDTH=40%>Address<br></td>
+<td VALIGN=top WIDTH=20%>Phone<br></td>
+<td VALIGN=top WIDTH=15% ALIGN=center>Paramedics<br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":tname0:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":taddr0:" TYPE="text" SIZE=35 MAXLENGTH=70><br></td>
+<td VALIGN=top><INPUT NAME=":tphon0:" TYPE="text" SIZE=15 MAXLENGTH=30><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":tpara0:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":tname1:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":taddr1:" TYPE="text" SIZE=35 MAXLENGTH=70><br></td>
+<td VALIGN=top><INPUT NAME=":tphon1:" TYPE="text" SIZE=15 MAXLENGTH=30><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":tpara1:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":tname2:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":taddr2:" TYPE="text" SIZE=35 MAXLENGTH=70><br></td>
+<td VALIGN=top><INPUT NAME=":tphon2:" TYPE="text" SIZE=15 MAXLENGTH=30><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":tpara2:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":tname3:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":taddr3:" TYPE="text" SIZE=35 MAXLENGTH=70><br></td>
+<td VALIGN=top><INPUT NAME=":tphon3:" TYPE="text" SIZE=15 MAXLENGTH=30><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":tpara3:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":tname4:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":taddr4:" TYPE="text" SIZE=35 MAXLENGTH=70><br></td>
+<td VALIGN=top><INPUT NAME=":tphon4:" TYPE="text" SIZE=15 MAXLENGTH=30><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":tpara4:"><br></td>
+</tr>
+</tbody>
+</table>
+<table ALIGN=left WIDTH=1000px BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<tbody>
+<tr ALIGN=center>
+<td COLSPAN=3 VALIGN=top BGCOLOR=#E9E9E9>B. Incident Ambulances<br></td>
+</tr>
+<tr>
+<td VALIGN=top WIDTH=25%>Name<br></td>
+<td VALIGN=top WIDTH=60%>Location<br></td>
+<td VALIGN=top  WIDTH=15%; ALIGN=center>Paramedics<br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":aname0:" TYPE="text" SIZE=20 MAXLENGTH=40><br></td>
+<td VALIGN=top><INPUT NAME=":aloca0:" TYPE="text" SIZE=45 MAXLENGTH=90><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":apara0:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":aname1:" TYPE="text" SIZE=20 MAXLENGTH=40><br></td>
+<td VALIGN=top><INPUT NAME=":aloca1:" TYPE="text" SIZE=45 MAXLENGTH=90><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":apara1:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":aname2:" TYPE="text" SIZE=20 MAXLENGTH=40><br></td>
+<td VALIGN=top><INPUT NAME=":aloca2:" TYPE="text" SIZE=45 MAXLENGTH=90><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":apara2:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":aname3:" TYPE="text" SIZE=20 MAXLENGTH=40><br></td>
+<td VALIGN=top><INPUT NAME=":aloca3:" TYPE="text" SIZE=45 MAXLENGTH=90><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":apara3:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":aname4:" TYPE="text" SIZE=20 MAXLENGTH=40><br></td>
+<td VALIGN=top><INPUT NAME=":aloca4:" TYPE="text" SIZE=45 MAXLENGTH=90><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":apara4:"><br></td>
+</tr>
+</tbody>
+</table>
+<table ALIGN=left WIDTH=1000px BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<tbody>
+<tr ALIGN=center>
+<td COLSPAN=7 VALIGN=top BGCOLOR=#E9E9E9>7. Hospitals<br></td>
+</tr>
+<tr>
+<td VALIGN=bottom WIDTH=20%>Name<br></td>
+<td VALIGN=bottom WIDTH=30%>Address<br></td>
+<td COLSPAN=2 VALIGN=top WIDTH=10%>&nbsp; Travel Time<br>&nbsp; Air&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Grnd<br></td>
+<td VALIGN=bottom WIDTH=15%>Phone<br></td>
+<td VALIGN=bottom WIDTH=5%>Helipad<br></td>
+<td VALIGN=top WIDTH=5% ALIGN=center>Burn<br>Center<br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":hname0:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":haddr0:" TYPE="text" SIZE=40 MAXLENGTH=90><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hatim0:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hgtim0:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top><INPUT NAME=":hphon0:" TYPE="text" SIZE=15 MAXLENGTH=30<br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hheli0:"><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hburn0:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":hname1:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":haddr1:" TYPE="text" SIZE=40 MAXLENGTH=90><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hatim1:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hgtim1:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top><INPUT NAME=":hphon1:" TYPE="text" SIZE=15 MAXLENGTH=30<br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hheli1:"><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hburn1:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":hname2:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":haddr2:" TYPE="text" SIZE=40 MAXLENGTH=90><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hatim2:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hgtim2:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top><INPUT NAME=":hphon2:" TYPE="text" SIZE=15 MAXLENGTH=30<br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hheli2:"><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hburn2:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":hname3:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":haddr3:" TYPE="text" SIZE=40 MAXLENGTH=90><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hatim3:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hgtim3:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top><INPUT NAME=":hphon3:" TYPE="text" SIZE=15 MAXLENGTH=30<br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hheli3:"><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hburn3:"><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":hname4:" TYPE="text" SIZE=20 MAXLENGTH=60><br></td>
+<td VALIGN=top><INPUT NAME=":haddr4:" TYPE="text" SIZE=40 MAXLENGTH=90><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hatim4:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top WIDTH=5%><INPUT NAME=":hgtim4:" TYPE="text" SIZE=10 MAXLENGTH=20><br></td>
+<td VALIGN=top><INPUT NAME=":hphon4:" TYPE="text" SIZE=15 MAXLENGTH=30<br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hheli4:"><br></td>
+<td VALIGN=top ALIGN=center><input type="checkbox" name=":hburn4:"><br></td>
+</tr>
+</tbody>
+</table>
+<table ALIGN=left WIDTH=1000px BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<tbody>
+<tr ALIGN=center>
+<td COLSPAN=2 VALIGN=top BGCOLOR=#E9E9E9>8. Medical Emergency Procedures<br></td>
+</tr>
+<tr>
+<td COLSPAN=2 VALIGN=top HEIGHT=200px><TEXTAREA NAME=":proc:" ROWS=12 COLS=72></TEXTAREA><br></td>
+</tr>
+<tr>
+<td VALIGN=top WIDTH=50%>9. Prepared by (Medical Unit Leader)<br><INPUT NAME=":prep:" TYPE="text" SIZE=25 MAXLENGTH=50><br></td>
+<td VALIGN=top>10.Reviewed by (Safety Officer)<br><INPUT NAME=":rvwr:" TYPE="text" SIZE=25 MAXLENGTH=50><br></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</FORM>
+</body>
+</html>

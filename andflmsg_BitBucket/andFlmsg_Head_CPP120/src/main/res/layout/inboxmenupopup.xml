@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+			android:orientation="vertical" 
+			android:layout_width="fill_parent"
+		    android:background="#F0000040"
+			android:layout_height="match_parent"
+			android:weightSum="1">
+			<LinearLayout
+			    android:id="@+id/FrameLayout2"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.02"
+			    android:orientation="horizontal"
+			    android:weightSum="1" >
+
+			    <Button
+			        android:id="@+id/button_viewashtmldelivery"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_HtmlDelivery" >
+			    </Button>
+
+			    <Button
+			        android:id="@+id/button_viewashtmlfilecopy"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_HtmlFileCopy" >
+			    </Button>
+
+			    <Button
+			        android:id="@+id/button_viewasplaintext"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_PlainText" >
+			    </Button>
+			    <Button
+			        android:id="@+id/button_return"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_Return" >
+			    </Button>
+			</LinearLayout>
+
+			<LinearLayout
+			    android:id="@+id/FrameLayout3"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.02"
+			    android:orientation="horizontal"
+			    android:weightSum="1" >
+			    <Button
+			        android:id="@+id/button_cpdrafts"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_CopyToDrafts" >
+			    </Button>
+			    <Button
+			        android:id="@+id/button_cpoutbox"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_CopyToOutbox" >
+			    </Button>
+			    			    <Button
+			        android:id="@+id/button_delete"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_Delete" >
+			    </Button>
+			    <Button
+			        android:id="@+id/button_shareforward"
+			        android:layout_width="87dp"
+			        android:layout_height="70dp"
+			        android:layout_gravity="fill_vertical"
+			        android:text="@string/bt_Share" >
+			    </Button>
+			</LinearLayout>
+			<WebView  
+				android:id="@+id/htmlwebview1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.96" 
+			/>
+		</LinearLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="bt_AddDeliveryCode">Ajouter Code Livraison</string>
+    <string name="bt_AddMessage">Ajouter Msg</string>
+    <string name="bt_AddToHXField">Ajouter au champ HX</string>
+    <string name="bt_ClearLog">Effacer Journal</string>
+    <string name="bt_Compose">Composer</string>
+    <string name="bt_Continue">Continuer</string>
+    <string name="bt_CopyToDrafts">Copier dans Brouillons</string>
+    <string name="bt_CopyToOutbox">à Envoyer</string>
+    <string name="bt_Delete">Effacer</string>
+    <string name="bt_Drafts">Brouillons</string>
+    <string name="bt_HtmlDelivery">Livr. Html</string>
+    <string name="bt_HtmlFileCopy">Copie Html</string>
+    <string name="bt_ImageMode">Mode Image</string>
+    <string name="bt_Inbox">Reçus</string>
+    <string name="bt_Logs">Journal</string>
+    <string name="bt_ModemOnOff">Modem On/Off</string>
+    <string name="bt_NextMode">Mode Proc.</string>
+    <string name="bt_Outbox">A Envoyer</string>
+    <string name="bt_PlainText">Text Brut</string>
+    <string name="bt_PrevMode">Mode Prec.</string>
+    <string name="bt_Return">Retour</string>
+    <string name="bt_ReturnToModem">Retour ecran Modem</string>
+    <string name="bt_ReturnToTerminal">Retour à l\'écran Console</string>
+    <string name="bt_RxRsID">Rx RsID</string>
+    <string name="bt_SaveAgain">Sauvé à Nouveau</string>
+    <string name="bt_SaveToDrafts">Sauver dans Brouillons</string>
+    <string name="bt_SaveToOutbox">Sauver dans A Envoyer</string>
+    <string name="bt_SaveToTemplates">Sauver dans Modèles</string>
+    <string name="bt_SendAllMessages">Envoyer Tous</string>
+    <string name="bt_SendText">Env. Text</string>
+    <string name="bt_Sent">Envoyés</string>
+    <string name="bt_Share">Partage</string>
+    <string name="bt_SlantLeft">Incline à Gauche</string>
+    <string name="bt_SlantRight">Incline à Droite</string>
+    <string name="bt_SpeedColor">Vitesse/Couleur</string>
+    <string name="bt_SqlchDown">Sqlch -</string>
+    <string name="bt_SqlchUp">Sqlch +</string>
+    <string name="bt_StopTx">Stop Trans.</string>
+    <string name="bt_Templates">Modèles</string>
+    <string name="bt_ToOutbox">à Envoyer</string>
+    <string name="bt_TransferFormOnly">Envoi Formulaire</string>
+    <string name="bt_Tune">Régler</string>
+    <string name="bt_TxOverRadio">Envoi par Radio</string>
+    <string name="bt_TxRsID">Tx RsID</string>
+    <string name="bt_WFallOnOff">W.Fall On/Off</string>
+
+    <string name="pref_2To256">2,4,8,16,32,64,128 or 256</string>
+    <string name="pref_8BitExtendedCharSet">Jeu de Charactères Etendu 8-Bit (UTF-8)</string>
+    <string name="pref_AbortFormRxAfter">Abandonner la Réception aprés NN Secondes d\'inativité</string>
+    <string name="pref_AllowErrors">Taux d\'Erreur Permis</string>
+    <string name="pref_AllowManualTuning">Ajustage Manuel de Fréquence Permis</string>
+    <string name="pref_AlsoTransmitUpperStartTone">Aussi Transmètre la Tonalité de Départ Supérieure</string>
+    <string name="pref_AndFlushRxPipeline">(et Nettoye le Pipeline de Réception)</string>
+    <string name="pref_AppTheme">Thème Application</string>
+    <string name="pref_AudioFrequency">Fréquence Audio, 500 à 2500Hz</string>
+    <string name="pref_BandwidthHz">Largeure de Bande (Hz)</string>
+    <string name="pref_BandwidthRelativeToSignalWidth">(Par Rapport à  la Bande du Signal)</string>
+    <string name="pref_CWIDetectionSuppression">Détection et Supression de Porteuse Continue</string>
+    <string name="pref_CWIThreshold">Seuil Elimination De CWI (0.0 a 1.0)</string>
+    <string name="pref_CallSignInFileName">Indicatif dans le Nom de Fichier</string>
+    <string name="pref_DATAEXCHANGE">ECHANGE de DONNEES</string>
+    <string name="pref_DateFormat">Format de Date</string>
+    <string name="pref_DateTimeFormat">FORMAT DATE / HEURE</string>
+    <string name="pref_DetectThorPreamble">Détecter le Préambule de THOR</string>
+    <string name="pref_EmailAddress">Adresse Courrier Electronique</string>
+    <string name="pref_EncoderForCompression">Encodeur de Compression</string>
+    <string name="pref_EndOfXmtID">Envoi RSID après Transmission</string>
+    <string name="pref_ExtractTimesOut">Délai Max. Entre Charatères</string>
+    <string name="pref_FILENAME">NOM DE FICHIER</string>
+    <string name="pref_FilterBandwidthFactor">Ratio de Bande Passante (1.0 à 2.0)</string>
+    <string name="pref_FilteringBeforeDecoding">Filtrer Avant le Décodage</string>
+    <string name="pref_ForSomeDevices">Pour Certain Appareils (typiquement 16 Secondes)</string>
+    <string name="pref_ForceCompressionOnTx">Forcer la Compression à l\'Emission</string>
+    <string name="pref_ForceIntegrationReset">Forcer une Mise à Zero de l\'Integration (FEC)</string>
+    <string name="pref_GPSTIME">HEURE GPS</string>
+    <string name="pref_GeneralSettings">Paramètres Généraux</string>
+    <string name="pref_IDs">RSID</string>
+    <string name="pref_IMAGEATTACHMENT">ATTACHEMENT D\'IMAGE</string>
+    <string name="pref_IfItSavesTxCharacters">(Seulement si cela réduit les charactères à envoyer)</string>
+    <string name="pref_IntegrationPeriod">Périodes d\'Intégration (2 à 128, 4 par défaut)</string>
+    <string name="pref_JpegCompressionQuality">Qualité de Compression Jpeg</string>
+    <string name="pref_LeapSecondsCorrection">Correction de Secondes Intercalaires</string>
+    <string name="pref_LongReceiveIntegration">Intégration de Réception Longue</string>
+    <string name="pref_MaxPictureSizeBeforeAutoDownsize">Taille Max. d\'Image avant Reduction Automatique</string>
+    <string name="pref_MaximunMegaPixels">Nombre de Mega Pixel Max.</string>
+    <string name="pref_MessageWordsPerLine">Nombre de Mots par Ligne</string>
+    <string name="pref_ModeList">Liste de Modes</string>
+    <string name="pref_ModemVolume">Volume Modem</string>
+    <string name="pref_ModesSpecificSettings">Paramètres des Modes</string>
+    <string name="pref_MultiPSKCompatibleFEC">FEC Compatible Version MultiPSK</string>
+    <string name="pref_MyAddress">Mon Adresse</string>
+    <string name="pref_MyCallsign">Mon Indicatif</string>
+    <string name="pref_MyCityStateZIP">Ma Ville / Etat / Code Postal</string>
+    <string name="pref_MyName">Mon Nom</string>
+    <string name="pref_MyTelephone">Mon Téléphone</string>
+    <string name="pref_NOCAL">NOCAL</string>
+    <string name="pref_NextSerialNumber">Prochain Numéro de Série</string>
+    <string name="pref_NumberOfFecBlocks">Nombre de Blocks de Correction D\'erreur (FEC)</string>
+    <string name="pref_NumberOfTones">Nombre de Tonalités</string>
+    <string name="pref_OnHTMLDisplayForms">Dans les Formulaires HTML</string>
+    <string name="pref_PERSONALDATA">DONNEES PERSONNELLES</string>
+    <string name="pref_PilotPowerDb">Puissange Pilote (dB)</string>
+    <string name="pref_PilotTone">Tonalité Pilote</string>
+    <string name="pref_RADIOGRAM">RADIOGRAM</string>
+    <string name="pref_SaveCpuResources">Economise le CPU</string>
+    <string name="pref_SearchesPassband">Cherche Toute la Bande Passante</string>
+    <string name="pref_SerialInFileName">Numéro de Série dans le Nom du Fichier</string>
+    <string name="pref_ShowARLDescription">Affiche la Description ARL des Codes</string>
+    <string name="pref_SlowCpu">CPU Lent</string>
+    <string name="pref_SoftBitDecoding">Décision Pondérée des Bit (Soft-bit Decoding)</string>
+    <string name="pref_SoftSymbolDecoding">Décision Pondérée Symboles (Soft-Symbol Decoding)</string>
+    <string name="pref_TimeFormat">Format des Heures</string>
+    <string name="pref_TimeInFileName">Heure dans le Nom du Fichier</string>
+    <string name="pref_ToneDuration">Durée de la Tonalité</string>
+    <string name="pref_ToneFrequencySpacing">(espace entre tonalités)</string>
+    <string name="pref_TransmitLowerStartTone">Tonalité Basse en Preambule (Tx)</string>
+    <string name="pref_TuneMargin">Tolérance en fréquence (2 à 128, 8 par défaut)</string>
+    <string name="pref_UseCompression">Compresser les Données à Transmettre</string>
+    <string name="pref_UseCustomListOfModes">Utiliser Liste Personnalisée de Modes</string>
+    <string name="pref_UseGPSTime">Utiliser l\'Heure GPS</string>
+    <string name="pref_UserInterface">INTERFACE UTILISATEUR</string>
+    <string name="pref_WhenNewBWOrTonesSelected">Au Changement de Largeure de Bande / Tonalités</string>
+
+    <string name="txt_About">À Propos</string>
+    <string name="txt_AndFormat">\nEt Son Format:</string>
+    <string name="txt_AreYouSureDeleteLogFile">Confirmez l\'Effacement de ce Journal?</string>
+    <string name="txt_AreYouSureDeleteMessage">Confirmez l\'Effacement de ce Message?</string>
+    <string name="txt_AreYouSureExit">Confirmer la Fermeture de cette Application?</string>
+    <string name="txt_AreYouSureOverwriteForms">Ceci VA REMPLACER les Formulaires Existant dans le dossier NBEMS.files et ajoutera de nouveaux formulaires. Continuer?</string>
+    <string name="txt_AudioBTOFF">BT Audio OFF</string>
+    <string name="txt_AudioBTON">BT Audio ON</string>
+    <string name="txt_BTConnected">Bluetooth Connecté</string>
+    <string name="txt_BTDisconnected">Bluetooth Deconnecté</string>
+    <string name="txt_BadCrcFileContent">Erreure Somme de Control ou Section Manquante. Contenu du fichier:</string>
+    <string name="txt_CPU">CPU</string>
+    <string name="txt_Cancel">Annuler</string>
+    <string name="txt_CantEditThatMessage">Edition du Message Impossible.</string>
+    <string name="txt_ChecksumOK">\nIntégrité du fichier: Somme de Control OK</string>
+    <string name="txt_ChooseLocForNbemsFiles">Veuillez choisir l\'emplacement du dossier NBEMS.files. \n\nNavigez a l\'interieur du dossier desiré, puis presser le bouton OK</string>
+    <string name="txt_Color">Couleur</string>
+    <string name="txt_ComposeViewLongPress">Ecran Nouveau Message\n\nPression Longue sur Formulaire pour Créer un Nouveau Message</string>
+    <string name="txt_CopiedFile">Copié Fichier</string>
+    <string name="txt_Digital">Digital</string>
+    <string name="txt_DocumentDeleted">Document Effacé</string>
+    <string name="txt_DoYouWantToMoveMsgToSentFolder">"Voulez-vous transférer ce message dans le fichier \'Envoyés\'?"</string>
+    <string name="txt_DraftViewLongPress">Ecran Brouillons Message\n\nPression Longue sur Message por Continuer l\'Edition</string>
+    <string name="txt_EnterFileName">Entrez le Nom du Fichier</string>
+    <string name="txt_Exit">Quitter</string>
+    <string name="txt_FileNameNotBlank">Le Nom de Fichier Ne Peut Pas Etre Vide</string>
+    <string name="txt_FileNotFound">Fichier Manquant</string>
+    <string name="txt_FldigiModemOn">Modem Fldigi ON, Micro/Bluetooth Usage réservé</string>
+    <string name="txt_FormattingWait">Formattage en Cours...Patientez</string>
+    <string name="txt_Grey">Gris</string>
+    <string name="txt_HTML">HTML</string>
+    <string name="txt_ImageInsertedInMessage">Image Insérée dans Message</string>
+    <string name="txt_ImageReceivedTooLate">Image Reçue Trop Tard (&gt;20 Sec. Après Message). \n\nL\'Image Reçue Ne Sera PAS Ajoutée au Message. \n\nCopier le Message dans les Brouillons et Ajouter l\'image Manuellement</string>
+    <string name="txt_InboxViewscreen">Ecran Boite Réception \n\nPression Longue sur Message Pour Affichage</string>
+    <string name="txt_Listening">Ecoute</string>
+    <string name="txt_LogsView">"Ecran Journeaux. "</string>
+    <string name="txt_ModemCannotStopNow">Le Modem ne peut pas être arrété maintenant! En cours de transmission ou de réception de message.</string>
+    <string name="txt_ModemON">Modem ON</string>
+    <string name="txt_ModemScreen">Ecran Modem</string>
+    <string name="txt_MsgRxTimeout">\nAbandonne la Réception de ce Message a cause de delai excessif (Voir Préférences)!</string>
+    <string name="txt_No">Non</string>
+    <string name="txt_NoFlmsgStatement">Declaration \"flmsg\" manquante. Message corrompu?</string>
+    <string name="txt_NoFormNameFound">Pas de Nom de Formulaire Dans le Message OU déclaration \"flmsg\" manquante. Affiche le text brut du message.</string>
+    <string name="txt_NotAnExistingForm">N\'est Pas un Formulaire Connu. Affiche le Text Brut du Message.</string>
+    <string name="txt_NotInMiddleOfMessage">Pas Pendant la Réception d\'un Message</string>
+    <string name="txt_Ok">Ok</string>
+    <string name="txt_OutboxView">Ecran \"A Envoyer\" \n\nPression Longue sur Message pour Ouvrir</string>
+    <string name="txt_PermissionsExplained">"Vous allez être présentés avec une série de demandes d'autorisations.
+                \nToutes les autorisations sont essentielles pour le fonctionnement de cette application.
+                \nSi vous deniez toute autorisations, l'application ne peut tourner comme requis et s'arrêtera.
+                \n\nExplications pour les autorisations:
+                \n1. Accès a la Position: Le GPS est utilisé pour afficher une heure exacte quand il n'y a pas de reseau cellulaire.
+                \n2. Bluetooth: pour recevoir et envoyer l'audio du Modem par un dispositif Bluetooth.
+                \n3. Accès aux Fichiers sur l'appareil: accéder au fichiers de l'application sur la carte SD (intérieure ou extérieure) pour sauvegarder les messages et les images.
+                \n4. Enregistrer des Fichiers Audio: pour capturer le son du microphone interne ou externe et adjuster le volume.
+                \n5. Internet: pour afficher et recueillir les données des formulaires HTML utilisés par Flmsg.
+                \n6. Broadcast Sticky: pour maintenir le modem en tache de fond.
+                \n7. Gerer les Appels Téléphoniques: pour déconnecter le Bluetooth lors de la réception d'un appel téléphonique. La reglementation Radio Amateur normallement interdit la connection d'un QSO au reseau telephonique.
+                \n\nSi vous avez denier une autorisations critique, retourner au parametres Application et rétablir toutes les autorisations manquantes pour cette application."</string>
+    <string name="txt_PleaseUseMenuExit">S\'il Vous Plait Utiliser la Fonction Quitter dans le Menu</string>
+    <string name="txt_PleaseWaitTxing">Patientez...En cours de transmission de Message(s)</string>
+    <string name="txt_Preferences">Préférences</string>
+    <string name="txt_PressBackTwice">Appuyer une autre fois pour Quitter</string>
+    <string name="txt_RawFlmsg">Flmsg-Text</string>
+    <string name="txt_ReceivedMessage">Message Reçu</string>
+    <string name="txt_ReceivingFile">Reception en Cour</string>
+    <string name="txt_ReceivingNewMessage">\n\nNouveau Message en Cour de Réception</string>
+    <string name="txt_ReceivingNewMessageDiscardingOld">\n\nNouveau Message Reçu. Message Précédent Reçu Partiellement est Abandonné\n</string>
+    <string name="txt_RxRsID">Rx RsId</string>
+    <string name="txt_S2N">S/B</string>
+    <string name="txt_Save">Sauvegarder</string>
+    <string name="txt_SavedFile">Fichier Sauvegardé</string>
+    <string name="txt_SavedImage">Image Sauvegardée</string>
+    <string name="txt_SavedRecoveredData">\n\nSauvé le Message Corrompu dans le fichier \'Last_Bad_CrC_Rx\'</string>
+    <string name="txt_Secs">Sec.</string>
+    <string name="txt_SelectARLDeliveryCodes">Sélectioner un Code Livraison ARL</string>
+    <string name="txt_SelectAnARLmessage">Sélectioner un Message ARL</string>
+    <string name="txt_SelectSource">Sélectioner une Source</string>
+    <string name="txt_SendForm">Envoi Formulaire</string>
+    <string name="txt_SendOverNetworkAsAttachment">pour Envoyer Comme Attachement (eMail, etc..)</string>
+    <string name="txt_SendOverNetworkAsText">pour Envoyer Comme Texte (SMS, etc..)</string>
+    <string name="txt_SentItemsView">Ecran Messages Envoyés\n\nPression Longue sur un Message pour l\'ouvrir</string>
+    <string name="txt_SentMessagefile">Envoyé Fichier de Message</string>
+    <string name="txt_Shared">Partagé</string>
+    <string name="txt_SharingPurpose">Pour quelle raison voulez-vous parteger ce message:</string>
+    <string name="txt_SorryHardCodedForm">Désolé mais ceci est un formulaire fixe (codé dans Flmsg) et ne peut être transféré de cette façon. Seule les formulaire personnalisés peuvent être transférés ainsi.</string>
+    <string name="txt_TemplatesView">Ecran Modèles\n\nPression Longue sur le Modèle pour créer un nouveau message</string>
+    <string name="txt_TerminalScreen">Ecran Console</string>
+    <string name="txt_ToDraftsFolderAs">dans dossier Brouillons sous le nom</string>
+    <string name="txt_ToFolder">Dans</string>
+    <string name="txt_ToOutboxFolder">dans dossier d\'Envoi</string>
+    <string name="txt_Transmitting">Transmission</string>
+    <string name="txt_TxRsID">Tx RsId</string>
+    <string name="txt_UpdateForms">MàJ Formulaires</string>
+    <string name="txt_UseDefault">Par Défaut</string>
+    <string name="txt_UseGalleryToView">Utiliser la Galerie pour Afficher et Partager</string>
+    <string name="txt_UseThisFolder">Utiliser Ce Dossier</string>
+    <string name="txt_ViewPrint">pour Afficher ou Imprimer</string>
+    <string name="txt_WRAP">WRAP</string>
+    <string name="txt_WarningSharingFormOnly">Attention! Ceci est pour Envoyer le Formulaire UNIQUEMENT. Pour Sauver les Données Entrées, utilizez les Boutons au Bas du Formulaire. Continuer avec the Formulaire (sans Données)?</string>
+    <string name="txt_WelcomeIntro">\n\nCe programme est distribué dans l\'espoir qu\'il sera utile, mais SANS AUCUNE GARANTIE ; sans même la garantie tacite de QUALITÉ MARCHANDE ou d\'ADÉQUATION à UN BUT PARTICULIER. Consultez la GNU General Public License pour plus de détails.
+        \n\nFaites glisser le doigt sur l\'écran pour accéder aux differents écrans, et utiliser la fonction Menu pour accéder aux Préférences et aux fonctions additionnelles.
+        \n\nVisiter www.w1hkj.com pour plus de détails.
+        \n\n73, l\'équipe Fldigi.
+    </string>
+    <string name="txt_WelcomeToAndFlmsg">Bienvenu à AndFlmsg</string>
+    <string name="txt_Yes">Oui</string>
+    <string name="txt_arlmessage">Message ARRL</string>
+    <string name="txt_crash_toast_text">S\'il vous plaît envoyez l\'information sur le crash de l\'application a l\'auteur pour aider à la resolution du problème. Merci et 73.</string>
+    <string name="txt_license">"     Ce programme est un logiciel libre sous licence GNU.
+        \nBasé sur Fldigi et Flmsg par David (Dave) Freese (W1HKJ) et équipe.
+        \n\nCe programme est distribué dans l\'espoir qu\'il sera utile, mais SANS AUCUNE GARANTIE ; sans même la garantie tacite de QUALITÉ MARCHANDE ou d\'ADÉQUATION à UN BUT PARTICULIER. Consultez la GNU General Public License pour plus de détails.
+        \nCe programme est un logiciel libre ; vous pouvez le redistribuer ou le modifier suivant les termes de la GNU General Public License telle que publiée par la Free Software Foundation ;
+        \nInclus la librairie aFileDialog (Copyright 2013 Jose F. Maldonado), sous licence suivante:
+        \nCe programme est un logiciel libre; vous pouvez le redistribuer ou le modifier suivant les termes de la GNU Lesser General Public License telle que publiée par la Free Software Foundation; soit la version 3 de la licence, soit (à votre gré) toute version ultérieure.
+        \n\nCe programme est distribué dans l\'espoir qu\'il sera utile, mais SANS AUCUNE GARANTIE ; sans même la garantie tacite de QUALITÉ MARCHANDE ou d\'ADÉQUATION à UN BUT PARTICULIER. Consultez la GNU General Public License pour plus de détails.
+        \nVous devez avoir reçu une copie de la GNU General Public License en même temps que ce programme ; si ce n'est pas le cas, consultez http://www.gnu.org/licenses.
+    </string>
+
+    <string name="values_High">Haut</string>
+    <string name="values_Low">Bas</string>
+    <string name="values_Medium">Moyen</string>
+    <string name="values_VeryHigh">Très Haut</string>
+    <string name="pref_ButtonTextSize">Taille du Texte des Boutons (12 par défaut)</string>
+    <string name="txt_BluetoothAudio">Audio Via Bluetooth</string>
+    <string name="txt_RestoreSettingsFromFile">Restituer les paramètres depuis le fichier</string>
+    <string name="txt_RestoreSettingsToDefault">Rétablir les paramètres par défaut</string>
+    <string name="txt_SaveRestoreSettings">Sauver/Rétablir les Paramètres</string>
+    <string name="txt_SaveSettingsToFile">Sauvegarder les paramètres par Fichier</string>
+    <string name="txt_Settings">Paramètres</string>
+    <string name="txt_YouWantToRestoreSettingsToDefault">Confirmez la Restauration des Paramètres aux Valeures par Défaut? \n\n Les Données Personnelles et Non-critiques aux Communications Resteront Inchangées.</string>
+    <string name="txt_NoBackupFileFound">Fichier de Sauvegarde des Parametres n\'éxiste pas. Utilisez \"Sauver les Paramètres\" au préalable.</string>
+    <string name="txt_YouWantToOverwriteSettings">Confirmez la Restauration des Paramètres Courants par le Fichier de Sauvegarde?</string>
+    <string name="txt_PleaseChangeMode">Impossible d\'envoyer les messages dans ce mode. Changer de Mode SVP.</string>
+
+</resources>

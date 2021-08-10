@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>HICS-214</TITLE>
+<META NAME="AUTHOR" CONTENT="w1hkj">
+<META NAME="CREATED" CONTENT="20111027">
+<STYLE type="text/css">
+p.F2 { FONT-FAMILY: "sans-serif"; FONT-SIZE: 11pt }
+p.F3 { FONT-FAMILY: "sans-serif"; FONT-SIZE: 14pt }
+p.F4 { FONT-FAMILY: "monospace"; FONT-SIZE: 12pt }
+</STYLE>
+</HEAD>
+<BODY>
+<FORM>
+<TABLE WIDTH=100% CELLPADDING=2 CELLSPACING=0 BORDER=1>
+<COL WIDTH=14%><COL WIDTH=11%><COL WIDTH=27%><COL WIDTH=48%>
+<TR>
+<TD COLSPAN=4><p class=F3><B>HICS 214 - OPERATIONAL LOG</B></p></TD>
+</TR>
+<TR>
+<TD><F1><B>1. INCIDENT NAME</B><br><INPUT NAME=":1:" TYPE="text" SIZE=52 MAXLENGTH=110></F1></TD>
+<TD WIDTH=30%><F1><B>2. DATE PREPARED</B><br><INPUT NAME=":2:" TYPE="text" SIZE=20 MAXLENGTH=40> <INPUT TYPE="button" onclick="dateprefill(':2:')" VALUE="..."></F1></TD>
+<TD WIDTH=20%><F1><B>2. TIME PREPARED</B><br><INPUT NAME=":2a:" TYPE="text" SIZE=12 MAXLENGTH=25> <INPUT TYPE="button" onclick="timeprefill(':2a:')" VALUE="..."></F1></TD>
+<TD><F1><B>3. OPERATIONAL PERIOD DATE/TIME</B><br><INPUT NAME=":3:" TYPE="text" SIZE=52 MAXLENGTH=110></F1></TD>
+</TR>
+<TR>
+<TD COLSPAN=2><F1><B>4. SECTION /BRANCH</B><br><INPUT NAME=":4:" TYPE="text" SIZE=52 MAXLENGTH=110></F1></TD>
+<TD COLSPAN=2><F1><B>5. POSITION</B><br><INPUT NAME=":5:" TYPE="text" SIZE=52 MAXLENGTH=110></F1></TD>
+</TR>
+<TR>
+<TD COLSPAN=4><p class=F2><B>6. ACTIVITY LOG</B></p></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD><p class=F2><B>Time</B></p></TD>
+<TD COLSPAN=3><p class=F2><B>Major Events, Decisions Made, and Notifications Given</B></p></TD>
+</TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[00]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[00]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[01]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[01]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[02]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[02]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[03]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[03]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[04]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[04]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[05]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[05]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[06]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[06]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[07]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[07]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[08]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[08]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[09]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[09]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[10]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[10]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[11]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[11]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[12]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[12]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[13]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[13]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[14]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[14]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[15]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[15]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[16]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[16]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[17]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[17]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[18]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[18]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[19]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[19]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[20]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[20]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[21]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[21]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[22]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[22]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[23]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[23]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[24]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[24]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[25]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[25]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[26]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[26]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[27]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[27]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[28]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[28]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR VALIGN=TOP><TD><p class=F2><INPUT NAME=":T[29]:" TYPE="text" SIZE=12 MAXLENGTH=25><br></p></TD><TD COLSPAN=3><p class=F2><INPUT NAME=":E[29]:" TYPE="text" SIZE=54 MAXLENGTH=120><br></p></TD></TR>
+<TR><TD COLSPAN=4><p class=F2><B>7. Prepared by: </B><INPUT NAME=":7:" TYPE="text" SIZE=52 MAXLENGTH=110></p></TD></TR>
+<TR><TD COLSPAN=4><p class=F2><B>8. Facility Name: </B><INPUT NAME=":8:" TYPE="text" SIZE=52 MAXLENGTH=110></p></TD></TR>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>:TITLE:</title>
+</head><body><form>
+<table ALIGN=left WIDTH=1000px BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<tbody>
+<tr>
+<td colspan=3 VALIGN=middle><big><b></b>ORGANIZATION ASSIGNMENT LIST</b></big></td>
+<td COLSPAN=2 VALIGN=top><b>1. Incident name</b><br><INPUT NAME=":inc:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+<td VALIGN=top><b>2.Date Prepared</b><br><INPUT NAME=":dat:" TYPE="text" SIZE=20 MAXLENGTH=90><INPUT TYPE="button" onclick="dateprefill(':dat:')" VALUE="..."><br></td>
+<td VALIGN=top><b>3.Time Prepared</b><br><INPUT NAME=":tim:" TYPE="text" SIZE=20 MAXLENGTH=90><INPUT TYPE="button" onclick="timeprefill(':tim:')" VALUE="..."><br></td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top><br><br>
+<hr WIDTH=100% HEIGHT=2px><b>5. Incident Command and Staff</b><br></td>
+<td COLSPAN=3 VALIGN=top>
+  <b>4. Operational Period (Date/Time)</b><br><INPUT NAME=":opp:" TYPE="text" SIZE=60 MAXLENGTH=90><br>
+  <hr WIDTH=100%; HEIGHT=2px><b>9. Operations section</b><br>
+</td>
+</tr>
+<tr>
+<td VALIGN=top>Incident Commander<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":icc:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Chief<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":ops_chief:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Deputy<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":icd:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Deputy<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":ops_deputy:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Safety Officer<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":ics:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><b>a. Branch I - Division / Groups</b><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Information Officer<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":ici:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Branch Director<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b1_director:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Liaison Officer<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":icl:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Deputy<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b1_deputy:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top><b>6. Agency Representative</b><br></td>
+<td COLSPAN=3 VALIGN=top>Division / Group<br></td>
+</tr>
+<tr>
+<td VALIGN=top>Agency<br></td>
+<td COLSPAN=3 VALIGN=top>Name<br></td>
+<td VALIGN=top><INPUT NAME=":b1_div[0]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b1_grp[0]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":agency[0]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":agency_name[0]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top><INPUT NAME=":b1_div[1]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b1_grp[1]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":agency[1]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":agency_name[1]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top><INPUT NAME=":b1_div[2]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b1_grp[2]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":agency[2]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":agency_name[2]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top><INPUT NAME=":b1_div[3]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b1_grp[3]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":agency[3]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":agency_name[3]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><b>b. Branch II - Division / Groups</b><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":agency[4]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":agency_name[4]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Chief<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b2_director:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":agency[5]:" TYPE="text" SIZE=30 MAXLENGTH=90><br>
+</td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":agency_name[5]:" TYPE="text" SIZE=30 MAXLENGTH=90><br>
+</td>
+<td VALIGN=top>Deputy<br>
+</td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b2_deputy:" TYPE="text" SIZE=30 MAXLENGTH=90><br>
+</td>
+</tr>
+<tr>
+<td VALIGN=top><INPUT NAME=":agency[6]:" TYPE="text" SIZE=30 MAXLENGTH=90><br>
+</td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":agency_name[6]:" TYPE="text" SIZE=30 MAXLENGTH=90></td>
+<td COLSPAN=3 VALIGN=top>Division / Group<br>
+</td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top><b>7. Planning Section</b><br></td>
+<td VALIGN=top><INPUT NAME=":b2_div[0]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b2_grp[0]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Chief<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":planning_chief:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top><INPUT NAME=":b2_div[1]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b2_grp[1]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Deputy<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":planning_deputy:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top><INPUT NAME=":b2_div[2]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b2_grp[2]:" TYPE="text" SIZE=60 MAXLENGTH=90> <br></td>
+</tr>
+<tr>
+<td VALIGN=top>Resources Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":resources_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top><INPUT NAME=":b2_div[3]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b2_grp[3]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Situation Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":situation_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><b>c. Branch III - Division / Groups</b><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Documentation Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":documentation_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Chief<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b3_director:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Demobilization Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":demobilization_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Deputy<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b3_deputy:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top>Technical Specialists<br></td>
+<td COLSPAN=3 VALIGN=top>Division / Group<br></td>
+</tr>
+<tr>
+<td COLSPAN=2 VALIGN=top>Specialist</td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":tech_spc[0]:" TYPE="text" SIZE=30 MAXLENGTH=90></td>
+<td VALIGN=top><INPUT NAME=":b3_div[0]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b3_grp[0]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=2 VALIGN=top>Specialist</td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":tech_spc[1]:" TYPE="text" SIZE=30 MAXLENGTH=90> </td>
+<td VALIGN=top><INPUT NAME=":b3_div[1]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b3_grp[1]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=2 VALIGN=top>Specialist</td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":tech_spc[2]:" TYPE="text" SIZE=30 MAXLENGTH=90> </td>
+<td VALIGN=top><INPUT NAME=":b3_div[2]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b3_grp[2]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top><b>8. Logistics Section</b><br></td>
+<td VALIGN=top><INPUT NAME=":b3_div[3]:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":b3_grp[3]:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Chief<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":logistics_chief:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><b>d. Air Operations Branch</b><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Deputy<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":logistics_deputy:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Air Operations Br. Dir.<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":air_ops_br_dir:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top><b>a. Support Branch</b><br></td>
+<td VALIGN=top>Air Tactical Group Sup.<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":air_tactical_group_sup:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Director<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":support_director:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Air Support Group Sup.<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":air_support_group_sup:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Supply Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":supply_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Helicopter Coordinator<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":helicopter_coordinator:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Facilities Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":facilities_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Air Tanker / Fixed Wing Crd.<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":air_tanker_fixed_wing:" TYPE="text" SIZE=30 MAXLENGTH=90><br>
+</td>
+</tr>
+<tr>
+<td VALIGN=top>Ground Support Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":ground_support:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td COLSPAN=3 VALIGN=top><br></td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top><b>b. Service Branch</b><br></td>
+<td COLSPAN=3 VALIGN=top><b>10. Finance / Administration Section</b><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Director<br>
+</td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":service_director:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Chief<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":finance_chief:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Communications Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":communications_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Deputy<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":finance_deputy:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Medical Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":medical_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Time Unit<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":time_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td VALIGN=top>Food Unit<br></td>
+<td COLSPAN=3 VALIGN=top><INPUT NAME=":food_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+<td VALIGN=top>Procurement Unit<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":procurement_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top><br></td>
+<td VALIGN=top>Compensation/Claims Unit<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":claims_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=4 VALIGN=top><br></td>
+<td VALIGN=top>Cost Unit<br></td>
+<td COLSPAN=2 VALIGN=top><INPUT NAME=":cost_unit:" TYPE="text" SIZE=30 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td COLSPAN=7 VALIGN=top><b>Prepared by (Resources Unit)</b><br><INPUT NAME=":pre:" TYPE="text" SIZE=60 MAXLENGTH=90><br></td>
+</tr>
+<tr>
+<td WIDTH=15% VALIGN=center HEIGHT=20px>ICS-203</td>
+<td WIDTH=10%></td>
+<td WIDTH=12%></td>
+<td WIDTH=13%></td>
+<td WIDTH=20%></td>
+<td WIDTH=15%></td>
+<td WIDTH=15%></td>
+</tr>
+</tbody>
+</table>
+</form>
+</body></html>

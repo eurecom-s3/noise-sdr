@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="DuplicateIds">
+        <ignore path="res/layout/modemwithwf.xml" />
+    </issue>
+    <issue id="HardcodedDebugMode">
+        <ignore path="AndroidManifest.xml" />
+    </issue>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/about.xml" />
+        <ignore path="res/layout/modemwithoutwf.xml" />
+        <ignore path="res/layout/modemwithwf.xml" />
+        <ignore path="res/layout/newemail.xml" />
+        <ignore path="res/layout/terminal.xml" />
+        <ignore path="res/menu/menu.xml" />
+    </issue>
+    <issue id="NewApi">
+        <ignore path="src/com/AndFlmsg/AndFlmsg.java" />
+    </issue>
+</lint>

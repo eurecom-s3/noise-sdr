@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="bt_AddDeliveryCode">Add Delivery Code</string>
+    <string name="bt_AddMessage">Add Msg</string>
+    <string name="bt_AddToHXField">Add To HX Field</string>
+    <string name="bt_ClearLog">Clear Log</string>
+    <string name="bt_Compose">Compose</string>
+    <string name="bt_Continue">Continue</string>
+    <string name="bt_CopyToDrafts">Copy To Drafts</string>
+    <string name="bt_CopyToOutbox">Copy to Outbox</string>
+    <string name="bt_Delete">Delete</string>
+    <string name="bt_Drafts">Drafts</string>
+    <string name="bt_HtmlDelivery">Html Deliv.</string>
+    <string name="bt_HtmlFileCopy">Html F.Cpy</string>
+    <string name="bt_ImageMode">Image Mode</string>
+    <string name="bt_Inbox">Inbox</string>
+    <string name="bt_Logs">Logs</string>
+    <string name="bt_ModemOnOff">Modem On/Off</string>
+    <string name="bt_NextMode">Next Mode</string>
+    <string name="bt_Outbox">Outbox</string>
+    <string name="bt_PlainText">Plain Text</string>
+    <string name="bt_PrevMode">Prev Mode</string>
+    <string name="bt_Return">Return</string>
+    <string name="bt_ReturnToModem">Return to Modem</string>
+    <string name="bt_ReturnToTerminal">Return To Terminal</string>
+    <string name="bt_RxRsID">Rx RsID</string>
+    <string name="bt_SaveAgain">Save Again</string>
+    <string name="bt_SaveToDrafts">Save To Drafts</string>
+    <string name="bt_SaveToOutbox">Save To Outbox</string>
+    <string name="bt_SaveToTemplates">Save To Templates</string>
+    <string name="bt_SendAllMessages">Send All Messages</string>
+    <string name="bt_SendText">Send Text</string>
+    <string name="bt_Sent">Sent</string>
+    <string name="bt_Share">Share</string>
+    <string name="bt_SlantLeft">Slant     Left</string>
+    <string name="bt_SlantRight">Slant Right</string>
+    <string name="bt_SpeedColor">Speed/Color</string>
+    <string name="bt_SqlchDown">Sqlch Down</string>
+    <string name="bt_SqlchUp">Sqlch   Up</string>
+    <string name="bt_StopTx">Stop Tx</string>
+    <string name="bt_Templates">Templates</string>
+    <string name="bt_ToOutbox">To Outbox</string>
+    <string name="bt_TransferFormOnly">Tfer Form Only</string>
+    <string name="bt_Tune">Tune</string>
+    <string name="bt_TxOverRadio">Tx over Radio</string>
+    <string name="bt_TxRsID">Tx RsID</string>
+    <string name="bt_WFallOnOff">W.Fall On/Off</string>
+
+    <string name="pref_2To256">2,4,8,16,32,64,128 or 256</string>
+    <string name="pref_8BitExtendedCharSet">8-bit extended characters (UTF-8)</string>
+    <string name="pref_AbortFormRxAfter">Abort Form Rx after NN seconds of inactivity</string>
+    <string name="pref_AllowErrors">Allow Errors</string>
+    <string name="pref_AllowManualTuning">Allow Manual Tuning</string>
+    <string name="pref_AlsoTransmitUpperStartTone">Also transmit upper start tone</string>
+    <string name="pref_AndFlushRxPipeline">(and flush Rx pipeline)</string>
+    <string name="pref_AppTheme">App Theme</string>
+    <string name="pref_AudioFrequency">Audio Frequency, 500 to 2500Hz</string>
+    <string name="pref_BandwidthHz">Bandwidth (Hz)</string>
+    <string name="pref_BandwidthRelativeToSignalWidth">(Bandwidth Relative to Signal Width)</string>
+    <string name="pref_CWIDetectionSuppression">CWI Detection and Suppression</string>
+    <string name="pref_CWIThreshold">CWI threshold (0.0 to 1.0)</string>
+    <string name="pref_CallSignInFileName">Call Sign in File Name</string>
+    <string name="pref_DATAEXCHANGE">DATA EXCHANGE</string>
+    <string name="pref_DateFormat">Date Format</string>
+    <string name="pref_DateTimeFormat">DATE / TIME FORMAT</string>
+    <string name="pref_DetectThorPreamble">Detect THOR preamble</string>
+    <string name="pref_EmailAddress">Email Address</string>
+    <string name="pref_EncoderForCompression">Encoder For Compression</string>
+    <string name="pref_EndOfXmtID">Send Post Transmission RSID</string>
+    <string name="pref_ExtractTimesOut">Extract Times Out</string>
+    <string name="pref_FILENAME">FILE NAME</string>
+    <string name="pref_FilterBandwidthFactor">Filter bandwidth factor (1.0 to 2.0)</string>
+    <string name="pref_FilteringBeforeDecoding">Filtering Before Decoding</string>
+    <string name="pref_ForSomeDevices">For Some Devices (typical 16 seconds)</string>
+    <string name="pref_ForceCompressionOnTx">Force Compression on Tx</string>
+    <string name="pref_ForceIntegrationReset">Force Integration (FEC) depth to be Reset</string>
+    <string name="pref_GPSTIME">GPS TIME</string>
+    <string name="pref_GeneralSettings">General Settings</string>
+    <string name="pref_IDs">RSID</string>
+    <string name="pref_IMAGEATTACHMENT">IMAGE ATTACHMENT</string>
+    <string name="pref_IfItSavesTxCharacters">(Note: if it saves TX character count)</string>
+    <string name="pref_IntegrationPeriod">Integration Period (2 to 128, default 4)</string>
+    <string name="pref_JpegCompressionQuality">Jpeg Compression Quality</string>
+    <string name="pref_LeapSecondsCorrection">Leap Seconds Correction</string>
+    <string name="pref_LongReceiveIntegration">Long Receive Integration</string>
+    <string name="pref_MaxPictureSizeBeforeAutoDownsize">Max Picture Size Before Auto-Downsize</string>
+    <string name="pref_MaximunMegaPixels">Maximun Mega Pixels</string>
+    <string name="pref_MessageWordsPerLine">Message Words/Line</string>
+    <string name="pref_ModeList">Mode List</string>
+    <string name="pref_ModemVolume">Modem Volume</string>
+    <string name="pref_ModesSpecificSettings">Modes Specific Settings</string>
+    <string name="pref_MultiPSKCompatibleFEC">MultiPSK-compatible FEC</string>
+    <string name="pref_MyAddress">My Address</string>
+    <string name="pref_MyCallsign">My Callsign</string>
+    <string name="pref_MyCityStateZIP">My City/ State/ ZIP</string>
+    <string name="pref_MyName">My Name</string>
+    <string name="pref_MyTelephone">My Telephone</string>
+    <string name="pref_NOCAL">NOCAL</string>
+    <string name="pref_NextSerialNumber">Next Serial Number</string>
+    <string name="pref_NumberOfFecBlocks">(Number of FEC blocks)</string>
+    <string name="pref_NumberOfTones">Number of Tones</string>
+    <string name="pref_OnHTMLDisplayForms">(On HTML Display Forms)</string>
+    <string name="pref_PERSONALDATA">PERSONAL DATA</string>
+    <string name="pref_PilotPowerDb">Pilot Power (dB)</string>
+    <string name="pref_PilotTone">Pilot Tone</string>
+    <string name="pref_RADIOGRAM">RADIOGRAM</string>
+    <string name="pref_SaveCpuResources">Save CPU Resources</string>
+    <string name="pref_SearchesPassband">Searches Passband</string>
+    <string name="pref_SerialInFileName">Serial # in File Name</string>
+    <string name="pref_ShowARLDescription">Show ARL Description</string>
+    <string name="pref_SlowCpu">Slow CPU</string>
+    <string name="pref_SoftBitDecoding">Soft-bit Decoding)</string>
+    <string name="pref_SoftSymbolDecoding">Soft-symbol decoding</string>
+    <string name="pref_TimeFormat">Time Format</string>
+    <string name="pref_TimeInFileName">Time in File Name</string>
+    <string name="pref_ToneDuration">Tone Duration</string>
+    <string name="pref_ToneFrequencySpacing">(tone frequency spacing)</string>
+    <string name="pref_TransmitLowerStartTone">Transmit Lower Start Tone</string>
+    <string name="pref_TuneMargin">Tune Margin (2 to 128, default 8)</string>
+    <string name="pref_UseCompression">Use Compression for Data Exchange</string>
+    <string name="pref_UseCustomListOfModes">Use Custom List Of Modes</string>
+    <string name="pref_UseGPSTime">Use GPS Time</string>
+    <string name="pref_UserInterface">USER INTERFACE</string>
+    <string name="pref_WhenNewBWOrTonesSelected">When new BW/Tones selected</string>
+
+    <string name="txt_About">About</string>
+    <string name="txt_AndFormat">\nAnd its Format:</string>
+    <string name="txt_AreYouSureDeleteLogFile">Are you sure you want to Delete This Log File?</string>
+    <string name="txt_AreYouSureDeleteMessage">Are you sure you want to Delete This Message?</string>
+    <string name="txt_AreYouSureExit">Are you sure you want to Exit?</string>
+    <string name="txt_AreYouSureOverwriteForms">This WILL OVERWRITE the Existing Forms in the NBEMS.files folder and Add New Forms. Proceed?</string>
+    <string name="txt_AudioBTOFF">Audio BT OFF</string>
+    <string name="txt_AudioBTON">Audio BT ON</string>
+    <string name="txt_BTConnected">Bluetooth Connected</string>
+    <string name="txt_BTDisconnected">Bluetooth Disconnected</string>
+    <string name="txt_BadCrcFileContent">Checksum Failed or Missing part. File Content:</string>
+    <string name="txt_CPU">CPU</string>
+    <string name="txt_Cancel">Cancel</string>
+    <string name="txt_CantEditThatMessage">Can\'t Edit this message</string>
+    <string name="txt_ChecksumOK">\"\nFile Integrity Check: Checksuml OK\"</string>
+    <string name="txt_ChooseLocForNbemsFiles">Please choose the Location for the NBEMS.files folder. \n\nNavigate to inside the desired folder then press the OK button</string>
+    <string name="txt_Color">Color</string>
+    <string name="txt_ComposeViewLongPress">Compose View\n\n Long Press on a Form for creating a New Message</string>
+    <string name="txt_CopiedFile">Copied File</string>
+    <string name="txt_Digital">Digital</string>
+    <string name="txt_DocumentDeleted">Document Deleted</string>
+    <string name="txt_DoYouWantToMoveMsgToSentFolder">"Do you want to Move this Message to the SENT folder?"</string>
+    <string name="txt_DraftViewLongPress">Drafts View Screen \n\nLong Press on a Message to Continue Editing</string>
+    <string name="txt_EnterFileName">Enter File Name</string>
+    <string name="txt_Exit">EXIT</string>
+    <string name="txt_FileNameNotBlank">File Name can\'t be blank</string>
+    <string name="txt_FileNotFound">File Not Found</string>
+    <string name="txt_FldigiModemOn">Fdigi Modem ON, Microphone/Bluetooth in use by Modem</string>
+    <string name="txt_FormattingWait">Formating...Please Wait</string>
+    <string name="txt_Grey">Grey</string>
+    <string name="txt_HTML">HTML</string>
+    <string name="txt_ImageInsertedInMessage">Image Inserted in Message</string>
+    <string name="txt_ImageReceivedTooLate">Image received too late after message (&gt; 20 sec).\\n\\nReceived image will NOT be attached to the message as expected.\\n\\nCopy the message to Draft, then edit and add the received image manually.</string>
+    <string name="txt_InboxViewscreen">Inbox View Screen \n\nLong Press on a Message for display</string>
+    <string name="txt_Listening">Listening</string>
+    <string name="txt_LogsView">Logs View\n\n Long Press on a Log file to view</string>
+    <string name="txt_ModemCannotStopNow">Modem cannot be stopped now! Either TXing or currently Receiving a Message</string>
+    <string name="txt_ModemON">Modem ON</string>
+    <string name="txt_ModemScreen">Modem Screen</string>
+    <string name="txt_MsgRxTimeout">\"\nAborting New Message Reception due to timeout as set in preferences)!\"</string>
+    <string name="txt_No">No</string>
+    <string name="txt_NoFlmsgStatement">Missing \"flmsg\" statement at start of Message file. Is it corrupted?</string>
+    <string name="txt_NoFormNameFound">No form name found in (corrupted?) message file or missing \"flmsg\" statement at start of file. Displaying raw file content</string>
+    <string name="txt_NotAnExistingForm">\" is Not an Existing Form file. Can\'t format this message, displaying raw file\"</string>
+    <string name="txt_NotInMiddleOfMessage">Not while in the middle of receiving a message</string>
+    <string name="txt_Ok">Ok</string>
+    <string name="txt_OutboxView">Outbox View\n\n Long Press on a Message to Select and Send</string>
+    <string name="txt_PermissionsExplained">"You are about to be presented with a series of permission requests.
+                \nAll permissions are essential to make this app work as intended.
+                \nIf you block any of the permissions the app cannot run and will exit.
+                \n\nExplanations for the permissions:
+                \n1. Access Fine Location: The GPS is used for showing accurate time when not in a cellular location.
+                \n2. Bluetooth and Bluethooth Admin: To send and receive the modem audio via a Bluetooth device.
+                \n3. Write External Storage: access to the app's directory on the SD card (internal or external) for storing messages and images.
+                \n4. Record Audio and Modify Audio Settings: To capture the audio from the internal or external microphone and adjust the settings.
+                \n5. Internet: for displaying and receiving data from the HTML forms used by Flmsg.
+                \n6. Broadcast Sticky: to have sticky notifications so that the modem service is kept going in the background.
+                \n7. Read Phone State: to disconnect the Bluetooth interface when receiving a phone call. Telecommunication regulations generally forbid connecting a person to the telephone network or to do so without a warning.
+                \n\nIf you have previously denied some critical permissions, you will have to go back to the Device's Settings/Apps and re-allow the missing permission."</string>
+    <string name="txt_PleaseUseMenuExit">Please Use the Menu then the Exit option to close AndFlmsg</string>
+    <string name="txt_PleaseWaitTxing">Please Wait...Still Transmitting Message(s)</string>
+    <string name="txt_Preferences">Preferences</string>
+    <string name="txt_PressBackTwice">Press the Back Button twice in a row to return to the list</string>
+    <string name="txt_RawFlmsg">RAW-Flmsg</string>
+    <string name="txt_ReceivedMessage">Received Message</string>
+    <string name="txt_ReceivingFile">Receiving File</string>
+    <string name="txt_ReceivingNewMessage">\"\n\nReceiving New Message\"</string>
+    <string name="txt_ReceivingNewMessageDiscardingOld">\"\n\nReceiving New Message, discarding any partially received data\n\"</string>
+    <string name="txt_RxRsID">Rx RsId</string>
+    <string name="txt_S2N">S2N</string>
+    <string name="txt_Save">Save</string>
+    <string name="txt_SavedFile">Saved File</string>
+    <string name="txt_SavedImage">Saved Image</string>
+    <string name="txt_SavedRecoveredData">\n\nSaved recovered data as \'Last_Bad_CrC_Rx\' File</string>
+    <string name="txt_Secs">Secs</string>
+    <string name="txt_SelectARLDeliveryCodes">Select ARL Delivery Codes</string>
+    <string name="txt_SelectAnARLmessage">Select an ARL Message</string>
+    <string name="txt_SelectSource">Select Source</string>
+    <string name="txt_SendForm">Send Form...</string>
+    <string name="txt_SendOverNetworkAsAttachment">for Sending As Attachment (Mail...)</string>
+    <string name="txt_SendOverNetworkAsText">for Sending As Plain text (SMS...)</string>
+    <string name="txt_SentItemsView">Sent Items View\n\nLong Press on a Message to View it</string>
+    <string name="txt_SentMessagefile">Sent Message file</string>
+    <string name="txt_Shared">Shared</string>
+    <string name="txt_SharingPurpose">Choose what purpose are you sharing this message for:</string>
+    <string name="txt_SorryHardCodedForm">Sorry, but this is a pre-defined form (Hard Coded in Flmsg) and it cannot be transferred this way. Only Custom Forms can be transferred using this method.</string>
+    <string name="txt_TemplatesView">Templates View Screen \n\nLong Press on a Template to Create a New Message based on that Template</string>
+    <string name="txt_TerminalScreen">Terminal Screen</string>
+    <string name="txt_ToDraftsFolderAs">to Drafts Folder as</string>
+    <string name="txt_ToFolder">To</string>
+    <string name="txt_ToOutboxFolder">to Outbox Folder</string>
+    <string name="txt_Transmitting">Transmitting</string>
+    <string name="txt_TxRsID">Tx RsId</string>
+    <string name="txt_UpdateForms">Update Forms</string>
+    <string name="txt_UseDefault">Use Default</string>
+    <string name="txt_UseGalleryToView">Use Gallery To View and Share</string>
+    <string name="txt_UseThisFolder">Use This folder</string>
+    <string name="txt_ViewPrint">for Viewing or Printing</string>
+    <string name="txt_WRAP">WRAP</string>
+    <string name="txt_WarningSharingFormOnly">Warning! This is for sharing the raw Form ONLY. To save the typed data as a message, use the buttons at the bottom of the form. Proceed with sending the RAW Form (No data)?</string>
+    <string name="txt_WelcomeIntro">\n\n This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\n\n Swipe across the screen to navigate to the other screens and use the device Menu button to get access to the preferences and additional functions.\n\n Visit www.w1hkj.com for more details\n\n 73, The Fldigi Team \n\n</string>
+    <string name="txt_WelcomeToAndFlmsg">Welcome to AndFlmsg</string>
+    <string name="txt_Yes">Yes</string>
+    <string name="txt_arlmessage">ARRLl Message</string>
+    <string name="txt_crash_toast_text">Please send crash information email to the author to help with problem correction. Thanks and 73.</string>
+    <string name="txt_license">
+    Open source software under GNU licence.\n\n     Based on Fldigi and Flmsg by David (Dave) Freese (W1HKJ) and team.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        \nSee the GNU General Public License for more details.\n\n\nIncludes the library aFileDialog (Copyright 2013 Jose F. Maldonado), under the following license:
+        \nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+        \nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+        \nYou should have received a copy of the GNU Lesser General Public License along with this library; If not, see http://www.gnu.org/licenses/.
+    </string>
+
+    <string name="values_High">High</string>
+    <string name="values_Low">Low</string>
+    <string name="values_Medium">Medium</string>
+    <string name="values_VeryHigh">Very High</string>
+
+    <string name="pref_DOMINOEX" translatable="false">DOMINOEX</string>
+    <string name="pref_MT63" translatable="false">MT63</string>
+    <string name="pref_OLIVIA" translatable="false">OLIVIA</string>
+    <string name="pref_CONTESTIA" translatable="false">CONTESTIA</string>
+    <string name="pref_PSK" translatable="false">PSK</string>
+    <string name="pref_THOR" translatable="false">THOR</string>
+    <string name="txt_app_name" translatable="false">AndFlmsg</string>
+    <string name="txt_0000" translatable="false">0000</string>
+    <string name="pref_ButtonTextSize">Button Text Size (default 12)</string>
+    <string name="txt_BluetoothAudio">Bluetooth Audio</string>
+    <string name="txt_Settings">Settings</string>
+    <string name="txt_SaveRestoreSettings">Save/Restore Settings</string>
+    <string name="txt_SaveSettingsToFile">Save Settings to File</string>
+    <string name="txt_RestoreSettingsFromFile">Restore Settings from File</string>
+    <string name="txt_RestoreSettingsToDefault">Restore Settings to Default</string>
+    <string name="txt_YouWantToOverwriteSettings">Are you sure you want to overwrite the current preferences with the ones in the backup?</string>
+    <string name="txt_YouWantToRestoreSettingsToDefault">Are you sure you want to Restore the KEY settings to default? \n\n Personal Data and non-communication critical data will be preserved.</string>
+    <string name="txt_NoBackupFileFound">No Backup File Found\n\n Use \"Save Preferences\" option first.</string>
+    <string name="txt_PleaseChangeMode">Cannot send messages in current mode. Please change mode.</string>
+
+</resources>

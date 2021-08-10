@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/exit"
+        android:title="@string/txt_Exit">
+    </item>
+    <item android:id="@+id/Bluetooth"
+        android:title="@string/txt_BluetoothAudio">
+        <menu>
+            <item
+                android:id="@+id/BTon"
+                android:title="@string/txt_AudioBTON"
+                android:showAsAction="never|withText">
+            </item>
+            <item
+                android:id="@+id/BToff"
+                android:title="@string/txt_AudioBTOFF"
+                android:showAsAction="never|withText">
+            </item>
+        </menu>
+    </item>
+    <item android:id="@+id/prefs"
+        android:title="@string/txt_Settings" />
+    <item
+        android:id="@+id/Preferences"
+        android:title="@string/txt_SaveRestoreSettings"
+        android:showAsAction="never|withText">
+        <menu>
+            <item
+                android:id="@+id/savePreferences"
+                android:title="@string/txt_SaveSettingsToFile"
+                android:showAsAction="never|withText">
+            </item>
+            <item
+                android:id="@+id/restorePreferences"
+                android:title="@string/txt_RestoreSettingsFromFile"
+                android:showAsAction="never|withText">
+            </item>
+            <item
+                android:id="@+id/defaultPreferences"
+                android:title="@string/txt_RestoreSettingsToDefault"
+                android:showAsAction="never|withText">
+            </item>
+        </menu>
+    </item>
+    <item android:id="@+id/reloadforms" android:title="@string/txt_UpdateForms"></item>item>
+    <item android:id="@+id/About" android:title="@string/txt_About"></item>
+</menu>

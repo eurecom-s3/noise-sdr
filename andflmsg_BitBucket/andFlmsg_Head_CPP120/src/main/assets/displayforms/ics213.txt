@@ -1,0 +1,21 @@
+ICS 213 GENERAL MESSAGE
+
+
+INC: :inc:
+TO: :to:
+POSITION: :p1:
+FROM: :fm:
+POSITION: :p2:
+SUBJ: :sb:
+DATE: :d1:
+TIME: :t1:
+MESSAGE:
+:mg:
+SIGNATURE: :s1:
+POSITION: :p3:
+REPLY:
+:rp:
+DATE: :d2:
+TIME: :t2:
+SIGNATURE: :s2:
+POSITION: :p4:

@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>ICS205</title>
+</head>
+<body>
+<form>
+<table WIDTH=1000px border=0 cellpadding=0 cellspacing=0>
+<tbody>
+<tr><td>
+<table WIDTH=1000px border=1 cellpadding=2 cellspacing=0>
+<tbody>
+<tr ALIGN=center>
+<td VALIGN=top WIDTH=250px><b>INCIDENT RADIO<br>COMMUNICATIONS PLAN</b></td>
+<td VALIGN=top WIDTH=250px>
+ <div ALIGN=left>1. Incident Name<br></div><div ALIGN=left><INPUT NAME=":nam:" TYPE="text" SIZE=72 MAXLENGTH=100></div>
+</td>
+<td VALIGN=top ALIGN=left WIDTH=250px>2. Date/Time Prepared<br><INPUT NAME=":dt1:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="datetimeprefill(':dt1:')" VALUE="..."></td>
+<td VALIGN=top ALIGN=left WIDTH=250px>3. Operational Period<br>
+from: <INPUT NAME=":dt2:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="datetimeprefill(':dt2:')" VALUE="..."><br>
+__to: <INPUT NAME=":dt3:" TYPE="text" SIZE=11 MAXLENGTH=20><INPUT TYPE="button" onclick="datetimeprefill(':dt3:')" VALUE="..."></td>
+</tr>
+</tbody>
+</table>
+</td></tr>
+<tr><td>
+<table ALIGN=left WIDTH=1000px BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<tbody>
+<tr ALIGN=center>
+<td COLSPAN=9 VALIGN=top>4. Basic Radio Channel Utilization<br></td>
+</tr>
+<tr ALIGN=center>
+<td VALIGN=top HALIGN=center WIDTH=30px>LN<br>#<br></td>
+<td VALIGN=top HALIGN=center WIDTH=160px>Function<br></td>
+<td VALIGN=top HALIGN=center WIDTH=160px>Channel<br></td>
+<td VALIGN=top HALIGN=center WIDTH=160px>Assignment<br></td>
+<td VALIGN=top HALIGN=center WIDTH=115px>Rx Freq<br></td>
+<td VALIGN=top HALIGN=center WIDTH=115px>Rx Tone<br></td>
+<td VALIGN=top HALIGN=center WIDTH=115px>Tx Freq<br></td>
+<td VALIGN=top HALIGN=center WIDTH=115px>Tx Tone<br></td>
+<td VALIGN=top HALIGN=center WIDTH=30px>Mode<br>A/D/M<br></td>
+</tr>
+<tr>
+<td>1</td>
+<td VALIGN=top><INPUT NAME=":func00:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan00:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn00:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq00:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn00:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq00:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn00:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode00:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk00:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>2</td>
+<td VALIGN=top><INPUT NAME=":func01:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan01:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn01:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq01:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn01:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq01:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn01:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode01:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk01:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>3</td>
+<td VALIGN=top><INPUT NAME=":func02:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan02:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn02:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq02:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn02:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq02:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn02:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode02:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk02:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>4</td>
+<td VALIGN=top><INPUT NAME=":func03:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan03:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn03:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq03:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn03:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq03:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn03:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode03:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk03:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>5</td>
+<td VALIGN=top><INPUT NAME=":func04:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan04:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn04:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq04:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn04:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq04:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn04:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode04:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk04:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>6</td>
+<td VALIGN=top><INPUT NAME=":func05:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan05:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn05:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq05:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn05:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq05:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn05:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode05:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk05:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>7</td>
+<td VALIGN=top><INPUT NAME=":func06:" TYPE="text" SIZE=20 MAXLENGTH=106><br></td>
+<td VALIGN=top><INPUT NAME=":chan06:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn06:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq06:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn06:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq06:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn06:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode06:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk06:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>8</td>
+<td VALIGN=top><INPUT NAME=":func07:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan07:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn07:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq07:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn07:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq07:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn07:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode07:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk07:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<tr>
+<td>9</td>
+<td VALIGN=top><INPUT NAME=":func08:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan08:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn08:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq08:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn08:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq08:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn08:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode08:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk08:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>10</td>
+<td VALIGN=top><INPUT NAME=":func09:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan09:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn09:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq09:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn09:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq09:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn09:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode09:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk09:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>11</td>
+<td VALIGN=top><INPUT NAME=":func10:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan10:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn10:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq10:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn10:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq10:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn10:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode10:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk10:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>12</td>
+<td VALIGN=top><INPUT NAME=":func11:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan11:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn11:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq11:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn11:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq11:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn11:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode11:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk11:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>13</td>
+<td VALIGN=top><INPUT NAME=":func12:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan12:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn12:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq12:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn12:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq12:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn12:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode12:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk12:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>14</td>
+<td VALIGN=top><INPUT NAME=":func13:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan13:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn13:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq13:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn13:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq13:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn13:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode13:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk13:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>15</td>
+<td VALIGN=top><INPUT NAME=":func14:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan14:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn14:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq14:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn14:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq14:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn14:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode14:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk14:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>16</td>
+<td VALIGN=top><INPUT NAME=":func15:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan15:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn15:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq15:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn15:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq15:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn15:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode15:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk15:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>17</td>
+<td VALIGN=top><INPUT NAME=":func16:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan16:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn16:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq16:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn16:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq16:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn16:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode16:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk16:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>18</td>
+<td VALIGN=top><INPUT NAME=":func17:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan17:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn17:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq17:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn17:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq17:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn17:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode17:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk17:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>19</td>
+<td VALIGN=top><INPUT NAME=":func18:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan18:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn18:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq18:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn18:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq18:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn18:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode18:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk18:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td>20</td>
+<td VALIGN=top><INPUT NAME=":func19:" TYPE="text" SIZE=20 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":chan19:" TYPE="text" SIZE=15 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":asgn19:" TYPE="text" SIZE=12 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxfq19:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":rxtn19:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txfq19:" TYPE="text" SIZE=8 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":txtn19:" TYPE="text" SIZE=4 MAXLENGTH=100><br></td>
+<td VALIGN=top><INPUT NAME=":mode19:" TYPE="text" SIZE=5 MAXLENGTH=100><br></td>
+</tr>
+<tr>
+<td COLSPAN=9 VALIGN=top>Remark: <INPUT NAME=":rmrk19:" TYPE="text" SIZE=120 MAXLENGTH=200><br></td>
+</tr>
+<tr>
+<td COLSPAN = 3 VALIGN=top>5. Prepared by (Communications unit)<br><INPUT NAME=":prp:" TYPE="text" SIZE=60 MAXLENGTH=100><br></td>
+<td COLSPAN = 6 VALIGN=top>6. Incident Location<br>
+County: <INPUT NAME=":cnty:" TYPE="text" SIZE=10 MAXLENGTH=10>  State: <INPUT NAME=":stat:" TYPE="text" SIZE=5 MAXLENGTH=10> Lat: <INPUT NAME=":lat:" TYPE="text" SIZE=10 MAXLENGTH=10> Lon: <INPUT NAME=":lon:" TYPE="text" SIZE=10 MAXLENGTH=10><br>
+</tr>
+</tbody>
+</table>
+</td></tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:weightSum="1">
+	<ScrollView android:id="@+id/terminalscrollview"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_weight="1.00">
+		<LinearLayout
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:weightSum="1">
+
+			<TextView 
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:textSize="18sp" android:padding="5dp"
+				android:text="                AndFlmsg\n
+        by John Douyere (VK2ETA)" />
+			<TextView 
+				android:id="@+id/versiontextview" android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:textSize="18sp" android:padding="5dp" android:layout_weight="0.13"/>
+			<TextView 
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:textSize="18sp" android:padding="5dp"
+				android:text="@string/txt_license" />
+			<LinearLayout android:id="@+id/FrameLayout2"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_weight="0.08" 
+				android:weightSum="1">
+				<Button android:id="@+id/button_returntoterminal"
+					android:layout_height="fill_parent" 
+					android:text="@string/bt_ReturnToTerminal"
+					android:layout_width="57dp" 
+					android:layout_weight="0.08"></Button>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

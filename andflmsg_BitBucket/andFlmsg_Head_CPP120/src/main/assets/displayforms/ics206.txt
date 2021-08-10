@@ -1,0 +1,93 @@
+ICS 206 MEDICAL PLAN
+Incident name: :nam:
+Operational period: :opp:
+Date Prepared: :dat:
+Time Prepared: :tim:
+Medical Aid Station #1: :msta0:
+Location #1: :mloc0:
+Paramedics #1: :mpar0:
+Medical Aid Station #2: :msta1:
+Location #2: :mloc1:
+Paramedics #2: :mpar1:
+Medical Aid Station #3: :msta2:
+Location #3: :mloc2:
+Paramedics #3: :mpar2:
+Medical Aid Station #4: :msta3:
+Location #4: :mloc3:
+Paramedics #4: :mpar3:
+Medical Aid Station #5: :msta4:
+Location #5: :mloc4:
+Paramedics #5: :mpar4:
+Ambulance service #1: :tname0:
+Address #1: :taddr0:
+Phone #1: :tphon0:
+Paramedics #1: :tpara0:
+Ambulance service #2: :tname1:
+Address #2: :taddr1:
+Phone #2: :tphon1:
+Paramedics #2: :tpara1:
+Ambulance service #3: :tname2:
+Address #3: :taddr2:
+Phone #3: :tphon2:
+Paramedics #3: :tpara2:
+Ambulance service #4: :tname3:
+Address #4: :taddr3:
+Phone #4: :tphon3:
+Paramedics #4: :tpara3:
+Ambulance service #5: :tname4:
+Address #5: :taddr4:
+Phone #5: :tphon4:
+Paramedics #5: :tpara4:
+Incident ambulance name #1: :aname0:
+Location #1: :aloca0:
+Paramedics #1 :apara0:
+Incident ambulance name #2: :aname1:
+Location #2: :aloca1:
+Paramedics #2 :apara1:
+Incident ambulance name #3: :aname2:
+Location #3: :aloca2:
+Paramedics #3 :apara2:
+Incident ambulance name #4: :aname3:
+Location #4: :aloca3:
+Paramedics #4 :apara3:
+Incident ambulance name #5: :aname4:
+Location #5: :aloca4:
+Paramedics #5 :apara4:
+Hospital name #1: :hname0:
+Address #1: :haddr0:
+Travel time, air #1: :hatim0:
+Travel time, ground #1: :hgtim0:
+Phone #1: :hphon0:
+Helipad #1: :hheli0:
+Burn center #1: :hburn0:
+Hospital name #2: :hname1:
+Address #2: :haddr1:
+Travel time, air #2: :hatim1:
+Travel time, ground #2: :hgtim1:
+Phone #2: :hphon1:
+Helipad #2: :hheli1:
+Burn center #2: :hburn1:
+Hospital name #3: :hname2:
+Address #3: :haddr2:
+Travel time, air #3: :hatim2:
+Travel time, ground #3: :hgtim2:
+Phone #3: :hphon2:
+Helipad #3: :hheli2:
+Burn center #3: :hburn2:
+Hospital name #4: :hname3:
+Address #4: :haddr3:
+Travel time, air #4: :hatim3:
+Travel time, ground #4: :hgtim3:
+Phone #4: :hphon3:
+Helipad #4: :hheli3:
+Burn center #4: :hburn3:
+Hospital name #5: :hname4:
+Address #5: :haddr4:
+Travel time, air #5: :hatim4:
+Travel time, ground #5: :hgtim4:
+Phone #5: :hphon4:
+Helipad #5: :hheli4:
+Burn center #5: :hburn4:
+Medical Emergency Procedures: :proc:
+Prepared by: :prep:
+Reviewed by: :rvwr:
