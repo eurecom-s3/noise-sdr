@@ -1,7 +1,0 @@
-:nbr: :prec: :sta: :ck: :org: :t1: :d1:
-:to:
-BT
-:msg:
-BT
-:fm:
-AR

@@ -1,9 +1,0 @@
-Formated for CW/Voice: :std:
-:nbr: :prec: :hx: :sta: :ck: :org: :t1: :d1:
-:to:
-:tel: :opn:
-BT
-:msg:
-BT
-:sig: :op2:
-AR

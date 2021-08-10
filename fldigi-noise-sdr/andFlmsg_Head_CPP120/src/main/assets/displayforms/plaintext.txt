@@ -1,8 +1,0 @@
-TITLE: :tt:
-TO: :to:
-FROM: :fm:
-SUBJ: :sb:
-DATE: :dt:
-TIME: :tm:
-MESSAGE:
-:mg:
