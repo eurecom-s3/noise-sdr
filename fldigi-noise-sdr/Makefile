@@ -4,7 +4,7 @@
 # minggw-x64 for windows
 # toolchain-mips_34kc_gcc-5.3.0_musl-1.1.14 for MIPS
 # Makefile inpired from https://spin.atomicobject.com/2016/08/26/makefile-c-projects/
-# and drammer
+# and drammer https://github.com/vusec/drammer
 
 ARCH ?= v8
 OP ?= CIVAC
