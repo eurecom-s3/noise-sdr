@@ -1,4 +1,4 @@
-#!/usr/bin/python3.8
+#!/usr/bin/python3.6
 
 import numpy as np
 from matplotlib import pyplot as plt
