@@ -63,7 +63,7 @@ Once you have compiled Noise-SDR, run in on your machine, or push it to a phone
 or other device to run it there (use the correct architecture).
 
 ```
-fldigi-noisesdr-XXXX --help
+fldigi-noise-sdr-XXXX --help
 ```
 
 There is also an offline version of Noise-SDR.
