@@ -110,7 +110,7 @@ source /home/vagrant/.profile
 # noise-sdr
 cd /home/vagrant/
 git clone git@github.com:eurecom-s3/noise-sdr.git
-git checkout release
+#git checkout release
 
 mkdir -p /vagrant/bin/
 
