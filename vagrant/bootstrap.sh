@@ -3,6 +3,8 @@
 # update
 sudo apt-get update
 
+mkdir -p /home/vagrant/tools
+
 # utils
 sudo apt-get install -y \
     firefox \
@@ -55,6 +57,8 @@ sudo make install
 sudo ldconfig
 
 
+cd /home/vagrant/tools/
+git clone https://github.com/gnss-sdr/gnss-sdr
 sudo apt-get install -y gfortran libgfortran5 libqt5widgets5 libqt5network5 \
      libqt5printsupport5 libqt5multimedia5-plugins qtmultimedia5-dev libqt5serialport5-dev \
      libqt5sql5-sqlite libfftw3-single3 libgomp1 libboost-all-dev \
@@ -67,10 +71,6 @@ cd build
 cmake -DWSJT_SKIP_MANPAGES=ON -DWSJT_GENERATE_DOCS=OFF ../
 cmake --build .
 sudo cmake --build . --target install
-
-
-https://github.com/osqzss/gps-sdr-sim.git
-
 
 # sdr dongles
 sudo apt-get install -y \
@@ -93,7 +93,6 @@ sudo apt-get install -y \
     clang \
     mingw-w64 
 
-mkdir -p /home/vagrant/tools
 cd /home/vagrant/tools
 wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip
 unzip android-ndk-r21d-linux-x86_64.zip
@@ -137,21 +136,27 @@ cp build/offline-* /vagrant/bin
 
 cd /home/vagrant/noise-sdr/gnuradio/
 git clone git@github.com:giocamurati/gr-lora_sdr-noise-sdr.git
-cd gr-lora_sdr-noise-sdr
+cd /home/vagrant/noise-sdr/gnuradio/gr-lora_sdr-noise-sdr
 mkdir build
 cd build
 cmake ../
 make
 sudo make install
 sudo ldconfig
-echo "export PYTHONPATH=$PYTHONPATH:/home/vagrant/lora_sdr/lib/python2.7/dist-packages/" >> /home/vagrant/.profile
-echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/vagrant/lora_sdr/lib/" >> /home/vagrant/.profile
-echo "export GRC_BLOCKS_PATH=$GRC_BLOCKS_PATH:/home/vagrant/noise-sdr/gnuradio/gr-lora_sdr-noise-sdr/grc" >> /home/vagrant/.profile
+echo 'export PYTHONPATH=$PYTHONPATH:/home/vagrant/lora_sdr/lib/python2.7/dist-packages/' >> /home/vagrant/.profile
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/vagrant/lora_sdr/lib/' >> /home/vagrant/.profile
+echo 'export GRC_BLOCKS_PATH=$GRC_BLOCKS_PATH:/home/vagrant/noise-sdr/gnuradio/gr-lora_sdr-noise-sdr/grc' >> /home/vagrant/.profile
 source /home/vagrant/.profile
 pip install pandas==0.24.2 unidecode==1.2.0
 
-# Create null sink
+## Create null sink
+pulseaudio --start
 pacmd load-module module-null-sink sink_name=MySink
+
+## Copy some configs
+cd /home/vagrant/noise-sdr/
+mkdir -p /home/vagrant/.config/gqrx/
+mkdir -p /home/vagrant/.fldigi/
 cp configs/gqrx-example-b210.conf /home/vagrant/.config/gqrx/
 cp configs/fldigi_def_example.xml /home/vagrant/.fldigi/fldigi_def.xml
 cp configs/WSJT-X-example.ini /home/vagrant/.config/WSJT-X.ini
