@@ -57,7 +57,7 @@ vagrant ssh
 
 ### Usage
 
-### Transmit side
+#### Transmit side
 
 Once you have compiled Noise-SDR, run in on your machine, or push it to a phone
 or other device to run it there (use the correct architecture).
@@ -77,7 +77,7 @@ and a version of noise-sdr that reads these files
 ./offline-noise-sdr-XXXX --help
 ```
 
-### Receive side
+#### Receive side
 
 Use your favorite tool for reception. For example, we use gqrx (and a USRP B210)
 and Fldigi, using a virtual audio sink to connect them.
