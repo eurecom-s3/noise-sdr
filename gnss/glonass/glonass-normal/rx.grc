@@ -93,7 +93,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>400.056e6</value>
+      <value>800.0e6</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -140,7 +140,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>90</value>
+      <value>38</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -199,7 +199,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>6.625e6</value>
+      <value>2e6</value>
     </param>
     <param>
       <key>_enabled</key>
