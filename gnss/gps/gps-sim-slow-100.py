@@ -125,8 +125,8 @@ def satellite(idx, duration):
     output = np.array(output, dtype=np.complex64)
     return output
 
-duration = 10
-satellites = [24]
+duration = 100
+satellites = [25]
 output = satellite(satellites[0], duration)
 for idx in satellites[1:]:
     output += satellite(idx, duration)
