@@ -54,7 +54,7 @@ else ifeq ($(strip $(OS)),windows)
 OP=STREAM
 LEAKY_OP=-DLEAKY_OP_$(OP)
 TOOLCHAIN=
-SRC_DIRS=./src/fldigi-noise-sdr ./src/fldigi
+SRC_DIRS=./src/noise-sdr
 LDDFLAGS = -lstdc++ --static -lpthread
 CC=x86_64-w64-mingw32-gcc-posix
 CXX=x86_64-w64-mingw32-g++-posix

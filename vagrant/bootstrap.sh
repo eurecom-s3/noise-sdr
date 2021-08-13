@@ -117,7 +117,6 @@ mkdir -p /vagrant/bin/
 cd /home/vagrant/noise-sdr/fldigi-noise-sdr
 make ARCH=x86
 make ARCH=x86 OS=windows
-make ARCH=x86 OS=windows
 make ARCH=v8 OP=CIVAC
 make ARCH=v8 OP=ION
 make ARCH=v7
@@ -126,7 +125,6 @@ cp build/fldigi-* /vagrant/bin
 
 cd /home/vagrant/noise-sdr/offline-noise-sdr/transmit
 make ARCH=x86
-make ARCH=x86 OS=windows
 make ARCH=x86 OS=windows
 make ARCH=v8 OP=CIVAC
 make ARCH=v8 OP=ION
