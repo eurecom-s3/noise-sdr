@@ -12,6 +12,10 @@ and digital radio protocols.
 Noise-SDR currently runs on x86_64 (Linux and Windows), ARMV7A/ARMV8A (Android),
 and MIPS32 (OpenWrt). Please check the academic paper for more details.
 
+<img src="docs/images/overview.jpg" alt="Noise-SDR Overview" width="40%" height="auto"/>
+<!--<img src="docs/images/overview2.jpg" alt="Noise-SDR Overview 2" width="40%" height="auto"/>-->
+<!--<img src="docs/images/thor22-rtty45-psk125r-3.jpg" alt="Noise-SDR Example" width="40%" height="auto"/>-->
+
 ***Note:*** This is just an initial release. You can already find the code and how to
 (cross)compile it. Running fldigi-noise-sdr is straightforward (check the help menu).
 We assume you have some familiarity with running code on various platforms,
@@ -38,6 +42,19 @@ We would like to thank Andrea Possemato, Giulia Clerici, Matteo Guarrera, Elie B
 Jean-Michel Picod, the anonymous reviewers and the shepherd for their feedback,
 help or interesting discussions.
 This work was partially supported by a Google Faculty Research Award.
+
+We are grateful for the many online resources and open-source tools that made
+our work possible, in particular:
+[Fldigi][fldigi],
+[GNURadio][gnuradio],
+[gr-lora_sdr][gr-lora_sdr],
+[gnss-sdr][gnss-sdr],
+[qsstv][qsstv],
+[wsjt-x][wsjt-x],
+[sigidwiki][sigidwiki],
+[system-bus-radio][system-bus-radio], and
+[drammer][drammer].
+Please see the academic paper for more and more detailed citations.
 
 ### Install
 
@@ -95,3 +112,14 @@ Precompiled binaries are [here][binary].
 [traces]: https://1drv.ms/u/s!AqlwqphoQwZ5qSpScQH9IPzaBstx?e=dvnG1Z
 [rfpwm]: https://1drv.ms/u/s!AqlwqphoQwZ5qSmq3aEv_CQwIx48?e=sVTFIY
 [binary]: https://1drv.ms/u/s!AqlwqphoQwZ5qSjIfMp2wkCCqNYe?e=80meEv
+
+[fldigi]: https://www.w1hkj.com/
+[gnuradio]: https://www.gnuradio.org/
+[gr-lora_sdr]: https://github.com/tapparelj/gr-lora_sdr
+[gnss-sdr]: https://gnss-sdr.org/
+[qsstv]: http://users.telenet.be/on4qz/
+[wsjt-x]: https://physics.princeton.edu/pulsar/k1jt/wsjtx.html
+[sigidwiki]: https://www.sigidwiki.com/wiki/Signal_Identification_Guide
+[system-bus-radio]: https://github.com/fulldecent/system-bus-radio
+[drammer]: https://github.com/vusec/drammer
+
