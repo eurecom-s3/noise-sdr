@@ -2,7 +2,7 @@
 
 Welcome to the Noise-SDR project!
 
-"Noise-SDR: Arbitrary Modulation of Electromagnetic Noise from Unprivileged Software and Its Impact on Emission Security" to appear at IEEE S&P 2022.
+Giovanni Camurati and Aurélien Francillon. "Noise-SDR: Arbitrary Modulation of Electromagnetic Noise from Unprivileged Software and Its Impact on Emission Security" to appear at IEEE S&P 2022.
 
 https://user-images.githubusercontent.com/17478984/129482511-21b08f37-dece-4cbf-99cd-bd8807670c84.mp4
 
@@ -34,8 +34,7 @@ and MIPS32 (OpenWrt). Please check the academic paper for more details.
 (cross)compile it. Running fldigi-noise-sdr is straightforward (check the help menu).
 We assume you have some familiarity with running code on various platforms,
 EM leakage, popular SDR tools and radio protocols
-(many resources online are available). We plan to follow up with more tutorials
-and more detailed instructions.
+(many resources online are available).
 
 ### Publications
 
@@ -241,6 +240,32 @@ and Fldigi, using a virtual audio sink to connect them:
 pulseaudio --start
 pacmd load-module module-null-sink sink_name=MySink
 ```
+
+#### Some more details for GNSS
+
+We provide helper scripts and configurations in the ```gnss/``` folder.
+
+For example, for GLONASS follow these steps.
+
+1. Glonass with pre-recorded traces
+    1. Download a GLONASS trace from [here][traces]. For example,
+       ```glonass-innosd6000-2MSaps-800MHz-glonass-example.complex```
+    2. Run the  reception script:
+       ```./receive.sh glonass-innosd6000-2MSaps-800MHz-glonass-example.complex```
+2. Record new traces
+    1. Connect a suitable phone (e.g., Innos D6000, see paper) and make sure adb works.
+    2. Enter in the glonass folder ```cd gnss/glonass/glonass-normal/```
+    3. Run the script that generates an example of glonass signal, conversts it to rfpwm,
+       and pushes it on the phone ```./generate-example.sh```
+    4. Connect a USRP B210 radio to your laptop and run the ```rx.grc``` flowgraph.
+       Adjust the parameters (e.g., harmonic you want to look at) in necessary.
+    5. Run offline-noise-sdr on the phone giving the rfpwm file generated at step 3 as input.
+    6. After a while, stop the flowgraph, which has generated the ```/tmp/glonass_rec``` IQ file.
+    7. Run the reception script ```./receive.sh /tmp/glonass_rec```
+
+Similar steps apply to the examples in ```glonass-slow-10```and ```gps```.
+
+#### Some more details for LoRa
 
 ### Traces
 
