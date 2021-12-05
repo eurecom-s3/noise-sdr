@@ -50,7 +50,7 @@ sudo apt-get install -y build-essential cmake git pkg-config libboost-dev \
 cd /home/vagrant/tools/
 git clone https://github.com/gnss-sdr/gnss-sdr
 cd gnss-sdr/build
-git checkout next
+git checkout 66a908fc42debcb7157acd773bccc056233bdc9a
 cmake ..
 make
 sudo make install
