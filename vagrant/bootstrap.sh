@@ -113,7 +113,7 @@ cd /home/vagrant/
 ssh-keyscan -H github.com > ~/.ssh/known_hosts
 git clone git@github.com:eurecom-s3/noise-sdr.git
 cd noise-sdr
-git checkout release
+#git checkout release
 
 mkdir -p /vagrant/bin/
 
