@@ -17,7 +17,8 @@ sudo apt-get install -y \
     alsa \
     alsa-utils \
     adb \
-    cmake
+    cmake \
+    swig
 
 pip3 install \
    numpy==1.19.5 \
