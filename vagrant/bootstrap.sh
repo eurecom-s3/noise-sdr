@@ -137,7 +137,7 @@ cp build/offline-* /vagrant/bin
 
 cd /home/vagrant/noise-sdr/gnuradio/
 git clone git@github.com:eurecom-s3/gr-lora_sdr-noise-sdr.git
-cd /home/vagrant/noise-sdr/eurecom-s3/gr-lora_sdr-noise-sdr
+cd /home/vagrant/noise-sdr/gnuradio/gr-lora_sdr-noise-sdr
 mkdir build
 cd build
 cmake ../
