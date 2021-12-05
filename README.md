@@ -187,6 +187,7 @@ automatically create a virtual machine. In either case, look at
 self-explaining installation instructions. Note that the actual Noise-SDR code
 is only a small part of this, the rest being popular SDR tools required, for
 example, for reception.
+In addition, precompiled binaries for Noise-SDR are available [here][binary].
 
 ```
 git clone https://github.com/eurecom-s3/noise-sdr.git
@@ -241,6 +242,21 @@ pulseaudio --start
 pacmd load-module module-null-sink sink_name=MySink
 ```
 
+Note that we provide example configuration files for FLDigi, GQRX, and WSJTX
+in the folder ```configs```.
+
+#### Replaying traces at the receive side
+
+When using GQRX, you can save raw IQ samples and then replay it later.
+Please check the GQRX documentations and tutorials for this.
+FLDigi can also open and replay wav recordings.
+
+You can find wav traces for the videos at the top of this page [here][traces]
+in the sub-folder ```gqrx/videos-wav```.
+
+You can find an IQ traces for the same examples as in the videos at the top of this page [here][traces]
+in the sub-folder ```gqrx/videos-iq```.
+
 #### Some more details for GNSS
 
 We provide helper scripts and configurations in the ```gnss/``` folder.
@@ -266,6 +282,19 @@ For example, for GLONASS follow these steps.
 Similar steps apply to the examples in ```glonass-slow-10```and ```gps```.
 
 #### Some more details for LoRa
+
+To receive LoRa packets we provide a modified version of gr-lora_sdr 
+available at git@github.com:giocamurati/gr-lora_sdr-noise-sdr.git
+(automatically installed in the vagrant VM).
+
+Compared to the original version, we provide:
+1. Two flowgraphs ```apps/lora_rx.grc``` and ```apps/lora_rx_simple.grc``` to scan the spectrum for
+   packets sent by fldigi-noise-sdr using different modes.
+2. An additional mode to receive LoRa-like packets without error correction, 
+   that we used in the paper as baseline.
+   
+Like for the original version, remember to run ```source apps/setpaths.sh```
+before running Gnuradio and opening the flowgraphs.
 
 ### Traces
 
